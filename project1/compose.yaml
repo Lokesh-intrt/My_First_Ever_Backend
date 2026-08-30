@@ -1,0 +1,10 @@
+services:
+  mysql:
+    image: 'mysql:latest'
+    environment:
+      - 'MYSQL_DATABASE=project1'
+      - 'MYSQL_PASSWORD=Lokesh@123'
+      - 'MYSQL_ROOT_PASSWORD=Lokesh@123'
+      - 'MYSQL_USER=project1_user'
+    ports:
+      - '3306:3306'
