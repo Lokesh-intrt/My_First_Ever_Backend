@@ -4,6 +4,8 @@ import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -17,6 +19,8 @@ import java.io.IOException;
 @Component
 public class JwtFilter extends OncePerRequestFilter {
 
+    private static final Logger log = LoggerFactory.getLogger(JwtFilter.class);
+
     private final JwtService jwtService;
     private final UserDetailsService userDetailsService;
 
@@ -28,7 +32,15 @@ public class JwtFilter extends OncePerRequestFilter {
     @Override
     protected boolean shouldNotFilter(HttpServletRequest request) {
         String path = request.getServletPath();
-        return path.startsWith("/auth/");
+        return path.startsWith("/auth/") || path.equals("/error");
+    }
+
+    private void writeUnauthorized(HttpServletResponse response, String message) throws IOException {
+        log.warn("JWT auth failed: {}", message);
+        response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+        response.setContentType("application/json");
+        response.setCharacterEncoding("UTF-8");
+        response.getWriter().write("{\"error\":\"" + message + "\"}");
     }
 
     @Override
@@ -39,14 +51,14 @@ public class JwtFilter extends OncePerRequestFilter {
 
         if (authHeader == null || !authHeader.startsWith("Bearer ")) {
             SecurityContextHolder.clearContext();
-            servletResponse.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Missing Bearer token");
+            writeUnauthorized(servletResponse, "Missing Authorization header. Use: Authorization: Bearer <token>");
             return;
         }
 
         String token = authHeader.substring(7).trim();
-        if (!jwtService.isValid(token)) {
+        if (token.isEmpty() || !jwtService.isValid(token)) {
             SecurityContextHolder.clearContext();
-            servletResponse.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Invalid or expired JWT token");
+            writeUnauthorized(servletResponse, "Invalid or expired JWT token");
             return;
         }
 
@@ -63,3 +75,4 @@ public class JwtFilter extends OncePerRequestFilter {
         filterChain.doFilter(servletRequest, servletResponse);
     }
 }
+

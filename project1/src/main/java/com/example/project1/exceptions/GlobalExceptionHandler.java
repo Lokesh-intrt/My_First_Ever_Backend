@@ -1,6 +1,7 @@
 package com.example.project1.exceptions;
 
 import com.auth0.jwt.exceptions.JWTCreationException;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,10 +11,29 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
 import java.util.HashMap;
+import java.util.Map;
 
 @ControllerAdvice
 public class GlobalExceptionHandler
 {
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<Map<String,Object>> handleAllExceptions(Exception ex, HttpServletRequest request)
+    {
+        Map<String,Object> body = new HashMap<>();
+
+        // 1. Force the exact Java Exception Name to print out
+        body.put("exception", ex.getClass().getSimpleName());
+
+        // 2. Extract the exact reason line
+        body.put("message", ex.getMessage());
+        body.put("path", request.getRequestURI());
+
+        // Print the stack trace in your IDE terminal so you don't even need Postman to show it
+        ex.printStackTrace();
+
+        // Return a clean 500 Internal Server Error back to Postman, bypassing the /error route
+        return new ResponseEntity<>(body, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
     @ExceptionHandler(DataIntegrityViolationException.class)
     public ResponseEntity<ExceptionResponse> dataBaseExceptions(DataIntegrityViolationException e)
     {

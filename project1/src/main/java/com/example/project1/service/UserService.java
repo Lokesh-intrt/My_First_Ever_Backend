@@ -3,11 +3,15 @@ package com.example.project1.service;
 import com.example.project1.DTOs.UserLoginDTO;
 import com.example.project1.DTOs.UserRegisterDTO;
 import com.example.project1.DTOs.UserResponseDTO;
+import com.example.project1.DTOs.UserUpdateDTO;
 import com.example.project1.mappers.MapUserResponse;
+import com.example.project1.mappers.MapUserUpdate;
 import com.example.project1.model.User;
 import com.example.project1.repositories.UserRepository;
 import jakarta.persistence.EntityNotFoundException;
-import org.springframework.beans.factory.annotation.Autowired;import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -18,14 +22,15 @@ public class UserService {
     private final PasswordEncoder passwordEncoder;
     private final AuthenticationService authenticationService;
 
-    @Autowired
-    MapUserResponse mapUserResponse;
+    private final MapUserResponse mapUserResponse;
+    private final  MapUserUpdate mapUserUpdate;
 
-    public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder, AuthenticationService authenticationService)
-    {
+    public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder, AuthenticationService authenticationService, MapUserResponse mapUserResponse, MapUserUpdate mapUserUpdate) {
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
         this.authenticationService = authenticationService;
+        this.mapUserResponse = mapUserResponse;
+        this.mapUserUpdate = mapUserUpdate;
     }
 
     public String registerUser(UserRegisterDTO userRegisterDTO)
@@ -47,10 +52,21 @@ public class UserService {
         return authenticationService.login(userLoginDTO.getEmail(),userLoginDTO.getPassword());
     }
 
-    public UserResponseDTO getUserInfo(Long id)
+    public UserResponseDTO getUserInfo(String email)
     {
-        User user = userRepository.findById(id).orElseThrow(()->new EntityNotFoundException("User"));
-
+        User user = userRepository.findByEmail(email).orElseThrow(()->new EntityNotFoundException("User"));
         return mapUserResponse.toDto(user);
     }
+
+    @PreAuthorize("hasRole('USER')")
+    public User updateUser(UserUpdateDTO userUpdateDTO, String email)
+    {
+        User user = userRepository.findByEmail(email).orElseThrow(()->new EntityNotFoundException("user"));
+
+        mapUserUpdate.updateFromDto(userUpdateDTO, user);
+        userRepository.save(user);
+
+        return user;
+    }
+
 }

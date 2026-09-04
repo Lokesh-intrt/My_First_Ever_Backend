@@ -22,7 +22,7 @@ public class Cart {
     @Column(nullable = false)
     private Double totalAmount;
 
-    @OneToMany(mappedBy = "cart")
+    @OneToMany(mappedBy = "cart",cascade = CascadeType.ALL,orphanRemoval = true)
     private List<CartItem> cartItems = new ArrayList<>();
 
     @OneToOne

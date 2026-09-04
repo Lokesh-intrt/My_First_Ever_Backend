@@ -1,0 +1,10 @@
+GET http://localhost:8082/product/get/all?page=0&size=2&sortBy=price&direction=asc
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyYXZpQGdtYWlsLmNvbSIsImlhdCI6MTc4ODQ5OTA3NywiZXhwIjoxNzg4NTAwODc3fQ.lsHFkjRE5yndMaFj3XtlCKiYRMfBxse15Sx1zfP88_w
+
+Content-Type: application/json
+
+{
+  "name": "Vada Pav",
+  "price": 20.00,
+  "stock": 10
+}
