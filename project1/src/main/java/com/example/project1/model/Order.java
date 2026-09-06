@@ -18,6 +18,9 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long orderId;
 
+    @Version
+    private Integer version;
+
     @Column(nullable = false)
     private Integer quantity;
 
@@ -40,6 +43,6 @@ public class Order {
         FAILED
     }
 
-    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL,orphanRemoval = true)
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL,orphanRemoval = true,fetch=FetchType.LAZY)
     private List<OrderItem> orderItems;
 }

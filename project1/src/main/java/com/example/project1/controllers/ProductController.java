@@ -42,11 +42,6 @@ public class ProductController {
         return ResponseEntity.ok(productService.viewAllProducts(page, size, sortBy, direction));
     }
 
-    @GetMapping("/get/{id}")
-    public ResponseEntity<Product> getProduct(@PathVariable Long id)
-    {
-        return ResponseEntity.status(HttpStatus.OK).body(productService.viewProduct(id));
-    }
 
     @PatchMapping("/patch/{id}")
     public ResponseEntity<Product> updateProduct(@PathVariable Long id, @Valid @RequestBody ProductUpdateDTO productUpdateDTO)

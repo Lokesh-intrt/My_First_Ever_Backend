@@ -10,11 +10,13 @@ import com.example.project1.repositories.ProductRepository;
 import com.example.project1.repositories.UserRepository;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.persistence.FetchType;
+import jakarta.persistence.LockModeType;
 import jakarta.transaction.Transactional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.data.jpa.repository.Lock;
 import org.springframework.security.access.prepost.PostAuthorize;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
@@ -59,6 +61,7 @@ public class ProductService {
     }
 
     @Transactional
+    @Lock(LockModeType.OPTIMISTIC)
     public Product updateProduct(Long id, ProductUpdateDTO requestDTO)
     {
         Product product = productRepository.findById(id).orElseThrow(()-> new EntityNotFoundException("product"));

@@ -22,6 +22,9 @@ public class OrderItem {
     @Column(nullable = false, updatable = false)
     private Double price;
 
+    @Column(nullable = false)
+    private Integer quantity;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "product_id")
     private Product product;

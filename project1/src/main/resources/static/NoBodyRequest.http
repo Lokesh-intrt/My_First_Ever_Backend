@@ -1,10 +1,8 @@
-GET http://localhost:8082/product/get/all?page=0&size=2&sortBy=price&direction=asc
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyYXZpQGdtYWlsLmNvbSIsImlhdCI6MTc4ODQ5OTA3NywiZXhwIjoxNzg4NTAwODc3fQ.lsHFkjRE5yndMaFj3XtlCKiYRMfBxse15Sx1zfP88_w
-
+DELETE http://localhost:8082/orderItems/remove/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyYXZpQGdtYWlsLmNvbSIsImlhdCI6MTc4ODcxMTM2OCwiZXhwIjoxNzg4NzEzMTY4fQ.NyxJcz2pZlU0sS3AUqqKySSlV9YvPYesJdeAXIaBaic
 Content-Type: application/json
 
 {
-  "name": "Vada Pav",
-  "price": 20.00,
-  "stock": 10
+  "id": 2,
+  "quantity": 7
 }
