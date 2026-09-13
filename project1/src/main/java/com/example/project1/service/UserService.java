@@ -8,14 +8,14 @@ import com.example.project1.mappers.MapUserResponse;
 import com.example.project1.mappers.MapUserUpdate;
 import com.example.project1.model.User;
 import com.example.project1.repositories.UserRepository;
-import jakarta.persistence.EntityNotFoundException;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.example.project1.exceptions.ResourceNotFoundException;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
+@Slf4j
 public class UserService {
 
     private final UserRepository userRepository;
@@ -33,7 +33,7 @@ public class UserService {
         this.mapUserUpdate = mapUserUpdate;
     }
 
-    public String registerUser(UserRegisterDTO userRegisterDTO)
+    public void registerUser(UserRegisterDTO userRegisterDTO)
     {
         String encodedPassword = passwordEncoder.encode(userRegisterDTO.getPassword());
         User user = new User();
@@ -43,25 +43,26 @@ public class UserService {
         user.setRole(User.Roles.ROLE_USER);
 
         userRepository.save(user);
-
-        return "You have been successfully registered";
     }
 
-    public String loginUser(UserLoginDTO userLoginDTO) throws Exception {
+    public String loginUser(UserLoginDTO userLoginDTO){
 
-        return authenticationService.login(userLoginDTO.getEmail(),userLoginDTO.getPassword());
+        String token = authenticationService.login(userLoginDTO.getEmail(),userLoginDTO.getPassword());
+        log.info("User:{} successfully logged in",userLoginDTO.getEmail());
+
+        return token;
     }
 
     public UserResponseDTO getUserInfo(String email)
     {
-        User user = userRepository.findByEmail(email).orElseThrow(()->new EntityNotFoundException("User"));
+        User user = userRepository.findByEmail(email).orElseThrow(()->new ResourceNotFoundException("User"));
         return mapUserResponse.toDto(user);
     }
 
     @PreAuthorize("hasRole('USER')")
     public User updateUser(UserUpdateDTO userUpdateDTO, String email)
     {
-        User user = userRepository.findByEmail(email).orElseThrow(()->new EntityNotFoundException("user"));
+        User user = userRepository.findByEmail(email).orElseThrow(()->new ResourceNotFoundException("user"));
 
         mapUserUpdate.updateFromDto(userUpdateDTO, user);
         userRepository.save(user);

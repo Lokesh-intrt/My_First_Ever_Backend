@@ -3,13 +3,13 @@ package com.example.project1.service;
 import com.example.project1.DTOs.OrderItemRequestDTO;
 import com.example.project1.DTOs.OrderRequestDTO;
 import com.example.project1.DTOs.OrderResponseDTO;
+import com.example.project1.exceptions.ResourceNotFoundException;
 import com.example.project1.mappers.MapOrderOrderResponse;
 import com.example.project1.model.Order;
 import com.example.project1.model.OrderItem;
 import com.example.project1.model.User;
 import com.example.project1.repositories.OrderRepository;
 import com.example.project1.repositories.UserRepository;
-import jakarta.persistence.EntityNotFoundException;
 import jakarta.persistence.LockModeType;
 import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.Lock;
@@ -39,7 +39,7 @@ public class OrderService {
     @Transactional(rollbackOn = Error.class)
     public OrderResponseDTO createOrder(OrderRequestDTO orderRequestDTO, Principal principal)
     {
-        User user = userRepository.findByEmail(principal.getName()).orElseThrow(()->new EntityNotFoundException("User"));
+        User user = userRepository.findByEmail(principal.getName()).orElseThrow(()->new ResourceNotFoundException("User"));
 
         List<OrderItem> orderItems = new ArrayList<>();
         int totalQuantity = 0;
@@ -73,7 +73,7 @@ public class OrderService {
     @Transactional
     public void cancelOrder(Long orderId)
     {
-        Order order = orderRepository.findById(orderId).orElseThrow(()->new EntityNotFoundException("order"));
+        Order order = orderRepository.findById(orderId).orElseThrow(()->new ResourceNotFoundException("order"));
         orderRepository.delete(order);
     }
 
@@ -81,7 +81,7 @@ public class OrderService {
     @Lock(LockModeType.OPTIMISTIC)
     public void modifyOrder(Long orderId)
     {
-        Order order = orderRepository.findById(orderId).orElseThrow(()->new EntityNotFoundException("order"));
+        Order order = orderRepository.findById(orderId).orElseThrow(()->new ResourceNotFoundException("order"));
 
         int totalQuantity = 0 ;
         double totalCost = 0.0;

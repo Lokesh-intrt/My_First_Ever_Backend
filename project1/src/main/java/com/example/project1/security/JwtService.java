@@ -13,18 +13,32 @@ import java.util.Date;
 @Component
 public class JwtService {
 
-    private Algorithm algorithm;
+    private final Algorithm algorithm;
+    private final long refreshTime;
+    private final long expireTime;
 
-    public JwtService(@Value("${jwt.secret}") String secret) {
+    public JwtService(
+            @Value("${jwt.secret}") String secret,
+            @Value("${token_refresh_time}") long refreshTime, @Value("${token_expire_time}") long expireTime) {
         this.algorithm = Algorithm.HMAC256(secret);
+        this.refreshTime = refreshTime;
+        this.expireTime = expireTime;
     }
 
     public String generateToken(Authentication authentication) {
-
        return JWT.create()
                 .withSubject(authentication.getName())
                 .withIssuedAt(Calendar.getInstance().getTime())
-                .withExpiresAt(new Date(System.currentTimeMillis()+1000L*60*30))
+                .withExpiresAt(new Date(System.currentTimeMillis()+expireTime))
+                .sign(algorithm);
+    }
+
+    public String generateRefreshToken(Authentication authentication)
+    {
+        return JWT.create()
+                .withSubject(authentication.getName())
+                .withIssuedAt(Calendar.getInstance().getTime())
+                .withExpiresAt(new Date(System.currentTimeMillis()+refreshTime))
                 .sign(algorithm);
     }
 

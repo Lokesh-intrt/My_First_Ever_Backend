@@ -13,7 +13,6 @@ import java.util.HashMap;
 public class ExceptionResponse {
    private String msg ;
    private HashMap<String,String> errors;
-
-
+   private String path;
 }
 

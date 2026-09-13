@@ -17,9 +17,9 @@ public class AuthenticationService {
         this.jwtService = jwtService;
     }
 
-    public String login(String username, String password) throws Exception {
-
-        UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(username, password);
+    public String login(String username, String password) {
+        UsernamePasswordAuthenticationToken token =
+                new UsernamePasswordAuthenticationToken(username, password);
         Authentication authentication = authenticationManager.authenticate(token);
 
         return jwtService.generateToken(authentication);

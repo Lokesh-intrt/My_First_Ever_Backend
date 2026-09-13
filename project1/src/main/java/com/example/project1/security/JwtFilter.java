@@ -32,7 +32,13 @@ public class JwtFilter extends OncePerRequestFilter {
     @Override
     protected boolean shouldNotFilter(HttpServletRequest request) {
         String path = request.getServletPath();
-        return path.startsWith("/auth/") || path.equals("/error");
+        return path.startsWith("/auth/")
+                ||path.startsWith("/login")
+                ||path.startsWith("/oauth2")
+                || path.equals("/error")
+                || path.startsWith("/swagger-ui/")
+                || path.equals("/swagger-ui.html")
+                || path.startsWith("/v3/api-docs");
     }
 
     private void writeUnauthorized(HttpServletResponse response, String message) throws IOException {
@@ -75,4 +81,3 @@ public class JwtFilter extends OncePerRequestFilter {
         filterChain.doFilter(servletRequest, servletResponse);
     }
 }
-

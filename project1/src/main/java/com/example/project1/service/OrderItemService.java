@@ -2,6 +2,8 @@ package com.example.project1.service;
 
 import com.example.project1.DTOs.OrderItemRequestDTO;
 import com.example.project1.DTOs.OrderItemResponseDTO;
+import com.example.project1.exceptions.IllegalQuantityException;
+import com.example.project1.exceptions.ResourceNotFoundException;
 import com.example.project1.mappers.MapProductOrderItem;
 import com.example.project1.model.Order;
 import com.example.project1.model.OrderItem;
@@ -9,11 +11,11 @@ import com.example.project1.model.Product;
 import com.example.project1.repositories.OrderItemRepository;
 import com.example.project1.repositories.OrderRepository;
 import com.example.project1.repositories.ProductRepository;
-import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 
 @PreAuthorize("isAuthenticated()")
 @Service
@@ -37,7 +39,10 @@ public class OrderItemService {
     @Transactional
     public OrderItem createOrderItem(OrderItemRequestDTO orderItemRequestDTO)
     {
-        Product product = productRepository.findById(orderItemRequestDTO.getId()).orElseThrow(()->new EntityNotFoundException("product"));
+
+        Product product = productRepository.findById(orderItemRequestDTO.getId()).orElseThrow(()->new ResourceNotFoundException("product"));
+        if(orderItemRequestDTO.getQuantity()>product.getStock())
+            throw new IllegalQuantityException(product.getName());
         OrderItem orderItem = new OrderItem();
         mapProductOrderItem.toOrderItem(product,orderItem);
         orderItem.setProduct(product);
@@ -48,8 +53,8 @@ public class OrderItemService {
     @Transactional
     public void removeOrderItem(Long itemId)
     {
-        OrderItem orderItem = orderItemRepository.findById(itemId).orElseThrow(()->new EntityNotFoundException("orderItem"));
-        Order order = orderRepository.findById(orderItem.getOrder().getOrderId()).orElseThrow(()->new EntityNotFoundException("order"));
+        OrderItem orderItem = orderItemRepository.findById(itemId).orElseThrow(()->new ResourceNotFoundException("orderItem"));
+        Order order = orderRepository.findById(orderItem.getOrder().getOrderId()).orElseThrow(()->new ResourceNotFoundException("order"));
         order.getOrderItems().remove(orderItem);
         orderService.modifyOrder(order.getOrderId());
         orderItem.setOrder(null);
@@ -60,8 +65,11 @@ public class OrderItemService {
     @Transactional
     public OrderItemResponseDTO modifyOrderItem(OrderItemRequestDTO orderItemRequestDTO)
     {
-        OrderItem orderItem = orderItemRepository.findById(orderItemRequestDTO.getId()).orElseThrow(()->new EntityNotFoundException("orderItem"));
+        OrderItem orderItem = orderItemRepository.findById(orderItemRequestDTO.getId()).orElseThrow(()->new ResourceNotFoundException("orderItem"));
 
+        Product product = productRepository.findById(orderItem.getProduct().getProductId()).orElseThrow(()->new ResourceNotFoundException("product"));
+        if(product.getStock()<orderItemRequestDTO.getQuantity())
+            throw new IllegalQuantityException(product.getName());
         orderItem.setQuantity(orderItemRequestDTO.getQuantity());
         orderService.modifyOrder(orderItem.getOrder().getOrderId());
         return new OrderItemResponseDTO(orderItem.getItemName(), orderItem.getPrice(), orderItem.getQuantity());

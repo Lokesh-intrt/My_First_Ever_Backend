@@ -1,8 +1,8 @@
 package com.example.project1.controllers;
 
+import com.example.project1.exceptions.ResourceNotFoundException;
 import com.example.project1.model.User;
 import com.example.project1.repositories.UserRepository;
-import jakarta.persistence.EntityNotFoundException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -21,7 +21,7 @@ public class DevController {
     @PatchMapping("/promote/{id}")
     public ResponseEntity<String> promoteUser(@PathVariable Long id)
     {
-        User user = userRepository.findById(id).orElseThrow(()->new EntityNotFoundException("user"));
+        User user = userRepository.findById(id).orElseThrow(()->new ResourceNotFoundException("user"));
 
         user.setRole(User.Roles.ROLE_SELLER);
 

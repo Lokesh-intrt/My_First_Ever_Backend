@@ -2,13 +2,14 @@ package com.example.project1.service;
 
 import com.example.project1.DTOs.ProductRequestDTO;
 import com.example.project1.DTOs.ProductUpdateDTO;
+import com.example.project1.exceptions.IllegalQuantityException;
 import com.example.project1.mappers.MapProductRequest;
 import com.example.project1.mappers.MapProductUpdate;
 import com.example.project1.model.Product;
 import com.example.project1.model.User;
 import com.example.project1.repositories.ProductRepository;
 import com.example.project1.repositories.UserRepository;
-import jakarta.persistence.EntityNotFoundException;
+import com.example.project1.exceptions.ResourceNotFoundException;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.LockModeType;
 import jakarta.transaction.Transactional;
@@ -21,14 +22,17 @@ import org.springframework.security.access.prepost.PostAuthorize;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 
+import java.util.Set;
+
 @Service
-@PreAuthorize("hasRole('SELLER')")
 public class ProductService {
 
     private final UserRepository userRepository;
     private final ProductRepository productRepository;
     private final MapProductRequest mapProductRequest;
     private final MapProductUpdate mapProductUpdate;
+    private static final Set<String> ALLOWED_SORTING_FIELDS = Set.of("name","price","status","stock");
+
 
     public ProductService(UserRepository userRepository, ProductRepository productRepository, MapProductRequest mapProductRequest, MapProductUpdate mapProductUpdate) {
         this.userRepository = userRepository;
@@ -37,10 +41,16 @@ public class ProductService {
         this.mapProductUpdate = mapProductUpdate;
     }
 
+    private static Boolean isAllowedSortByField(String sortBy)
+    {
+        return ALLOWED_SORTING_FIELDS.contains(sortBy);
+    }
+
+    @PreAuthorize("hasRole('SELLER')")
     @Transactional
     public Product createProduct(String email, ProductRequestDTO requestDTO)
     {
-        User user = userRepository.findByEmail(email).orElseThrow(()->new EntityNotFoundException("user"));
+        User user = userRepository.findByEmail(email).orElseThrow(()->new ResourceNotFoundException("user"));
 
         Product product = new Product();
         mapProductRequest.toProduct(requestDTO,product);
@@ -52,19 +62,43 @@ public class ProductService {
     }
 
     @PreAuthorize("isAuthenticated()")
-    public Page<Product> viewAllProducts(int page, int size, String sortBy, String direction)
+    public Page<Product> viewProductsByStatus(Product.ProductStatus status, int page, int size, String sortBy, Sort.Direction direction)
     {
-        Sort sort =direction.equalsIgnoreCase(Sort.Direction.ASC.name())
-                    ?Sort.by(sortBy).ascending():Sort.by(sortBy).descending();
+        if(!isAllowedSortByField(sortBy))
+            throw new IllegalArgumentException("this sorting is not available!");
+        Sort sort = Sort.by(direction,sortBy);
+        Pageable pageable = PageRequest.of(page, size, sort);
+
+        return productRepository.findByStatus(status, pageable);
+    }
+
+    @PreAuthorize("isAuthenticated()")
+    public Page<Product> viewProductsBySeller(String email,int page, int size, String sortBy, Sort.Direction direction)
+    {
+        if(!isAllowedSortByField(sortBy))
+            throw new IllegalArgumentException("this sorting is not available!");
+        Sort sort = Sort.by(direction,sortBy);
+        Pageable pageable = PageRequest.of(page, size, sort);
+
+        return productRepository.findBySeller_Email(email, pageable);
+    }
+
+
+    @PreAuthorize("isAuthenticated()")
+    public Page<Product> viewAllProducts(int page, int size, String sortBy, Sort.Direction direction)
+    {
+        if(!isAllowedSortByField(sortBy))
+            throw new IllegalArgumentException("this sorting is not available!");
+        Sort sort = Sort.by(direction,sortBy);
         Pageable pageable = PageRequest.of(page,size,sort);
         return productRepository.findAll(pageable);
     }
 
     @Transactional
-    @Lock(LockModeType.OPTIMISTIC)
-    public Product updateProduct(Long id, ProductUpdateDTO requestDTO)
+    @PreAuthorize("hasRole('SELLER')")
+    public Product updateProduct(String email,Long id, ProductUpdateDTO requestDTO)
     {
-        Product product = productRepository.findById(id).orElseThrow(()-> new EntityNotFoundException("product"));
+        Product product = productRepository.findByProductIdAndSeller_Email(id,email).orElseThrow(()-> new ResourceNotFoundException("product"));
 
         mapProductUpdate.toUpdateProduct(requestDTO,product);
 
@@ -72,9 +106,10 @@ public class ProductService {
     }
 
     @Transactional
-    public void deleteProduct(Long id)
+    @PreAuthorize("hasRole('SELLER')")
+    public void deleteProduct(String email,Long id)
     {
-        Product product = productRepository.findById(id).orElseThrow(()-> new EntityNotFoundException("product"));
+        Product product = productRepository.findByProductIdAndSeller_Email(id,email).orElseThrow(()-> new ResourceNotFoundException("product"));
 
         productRepository.delete(product);
     }

@@ -5,6 +5,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.orm.ObjectOptimisticLockingFailureException;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -61,15 +62,15 @@ public class GlobalExceptionHandler
         HashMap<String,String> errors = new HashMap<>();
         e.getBindingResult().getFieldErrors().forEach(error -> errors.put(error.getField(),error.getDefaultMessage()));
 
-        ExceptionResponse exceptionResponse = new ExceptionResponse(msg , errors);
+        ExceptionResponse exceptionResponse = ExceptionResponse.builder().msg(msg).errors(errors).build();
 
         return ResponseEntity.badRequest().body(exceptionResponse);
     }
 
-    @ExceptionHandler(EntityNotFoundException.class)
-    public ResponseEntity<String> userNotFoundHandling(EntityNotFoundException e)
+    @ExceptionHandler(ResourceNotFoundException.class)
+    public ResponseEntity<String> userNotFoundHandling(ResourceNotFoundException e)
     {
-        return ResponseEntity.badRequest().body(e.getMessage());
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
     }
 
     @ExceptionHandler(BadCredentialsException.class)
@@ -83,6 +84,20 @@ public class GlobalExceptionHandler
     public ResponseEntity<String> jwtTokenFail(JWTCreationException e)
     {
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("could not authorise. try later");
+    }
+
+    @ExceptionHandler(IllegalQuantityException.class)
+    public ResponseEntity<String> illegalQuantity(IllegalQuantityException e)
+    {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+    }
+
+    @ExceptionHandler(ObjectOptimisticLockingFailureException.class)
+    public ResponseEntity<ExceptionResponse> optimisticLockFailure(ObjectOptimisticLockingFailureException e, HttpServletRequest request)
+    {
+        return ResponseEntity.status(HttpStatus.CONFLICT).body(ExceptionResponse.builder().
+                msg("\"The Item You are trying to interact with has been modified. Please try again!\"")
+                .path(request.getRequestURI()).build());
     }
 
 }

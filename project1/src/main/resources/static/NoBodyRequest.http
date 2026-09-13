@@ -1,8 +1,16 @@
-DELETE http://localhost:8082/orderItems/remove/2
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyYXZpQGdtYWlsLmNvbSIsImlhdCI6MTc4ODcxMTM2OCwiZXhwIjoxNzg4NzEzMTY4fQ.NyxJcz2pZlU0sS3AUqqKySSlV9YvPYesJdeAXIaBaic
+POST http://localhost:8082/cart/create
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyYXZpQGdtYWlsLmNvbSIsImlhdCI6MTc4OTAzNDUwMywiZXhwIjoxNzg5MDM2MzAzfQ.--1H4dDzKjxokuTXIw5w4zgGfY1OYJ5Y154L13qpXbo
 Content-Type: application/json
 
 {
-  "id": 2,
-  "quantity": 7
+  "cartItemRequestDTOS": [
+    {
+      "productId": 2,
+      "quantity": 7
+    },
+    {
+      "productId": 1,
+      "quantity": 5
+    }
+  ]
 }
