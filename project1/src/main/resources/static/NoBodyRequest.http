@@ -1,16 +1,7 @@
-POST http://localhost:8082/cart/create
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJyYXZpQGdtYWlsLmNvbSIsImlhdCI6MTc4OTAzNDUwMywiZXhwIjoxNzg5MDM2MzAzfQ.--1H4dDzKjxokuTXIw5w4zgGfY1OYJ5Y154L13qpXbo
+POST http://localhost:8082/auth/login
 Content-Type: application/json
 
 {
-  "cartItemRequestDTOS": [
-    {
-      "productId": 2,
-      "quantity": 7
-    },
-    {
-      "productId": 1,
-      "quantity": 5
-    }
-  ]
+  "email": "lokesh@gmail.com",
+  "password": "Lokesh@123"
 }

@@ -1,12 +1,12 @@
 POST http://localhost:8082/cart/create
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJsb2tlc2hyZWRkeXBhbXVsdXJ1QGdtYWlsLmNvbSIsImlhdCI6MTc4OTI3ODYwNywiZXhwIjoxNzg5Mjc5NTA3fQ.6HOddFZh4N1i6FnIA0PnuPmu5EOweFH_m7H-u2f20Nk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJsb2tlc2hAZ21haWwuY29tIiwiaWF0IjoxNzg5NTY1NTgyLCJleHAiOjE3ODk1NjY0ODJ9.7uElkWdjfq3_6JA4WGu3P6lweAc7BxgZWWTgYAZb2b8
 Content-Type: application/json
 
 {
   "cartItemRequestDTOS": [
     {
       "productId": 2,
-      "quantity": 3
+      "quantity": 1
     },
     {
       "productId": 1,

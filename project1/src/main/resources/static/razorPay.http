@@ -1,0 +1,9 @@
+POST http://localhost:8082/api/razorpay/checkout
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJsb2tlc2hAZ21haWwuY29tIiwiaWF0IjoxNzg5NjM0MDIzLCJleHAiOjE3ODk2MzQ5MjN9.cxDpoJIXpztl_mrNBe10uTy7OVdIzaHNvvYlVyGRs_U
+Content-Type: application/json
+
+{
+  "orderId":2,
+  "amount": 40,
+  "currencyType": "INR"
+}

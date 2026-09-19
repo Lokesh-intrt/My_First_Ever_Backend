@@ -40,7 +40,8 @@ public class Order {
         DELIVERED,
         REROUTING,
         DELAYED,
-        FAILED
+        FAILED,
+        PAID
     }
 
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL,orphanRemoval = true,fetch=FetchType.LAZY)

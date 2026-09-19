@@ -35,6 +35,7 @@ public class JwtFilter extends OncePerRequestFilter {
         return path.startsWith("/auth/")
                 ||path.startsWith("/login")
                 ||path.startsWith("/oauth2")
+                || path.equals("/testRazorpay.html")
                 || path.equals("/error")
                 || path.startsWith("/swagger-ui/")
                 || path.equals("/swagger-ui.html")

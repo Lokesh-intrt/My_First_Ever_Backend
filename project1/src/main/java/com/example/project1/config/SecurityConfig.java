@@ -49,6 +49,7 @@ public class SecurityConfig {
                                 CorsUtils::isPreFlightRequest).permitAll())
                 .authorizeHttpRequests(auth -> auth
                                 .requestMatchers(
+                                        "/testRazorpay.html",
                                         "/oauth2/**",
                                 "/auth/**",
                                 "/login/**",

@@ -121,6 +121,12 @@
 			<artifactId>spring-boot-starter-oauth2-client</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>com.razorpay</groupId>
+			<artifactId>razorpay-java</artifactId>
+			<version>1.4.10</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>

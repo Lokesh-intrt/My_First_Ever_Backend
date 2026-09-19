@@ -1,7 +1,9 @@
 package com.example.project1.exceptions;
 
 import com.auth0.jwt.exceptions.JWTCreationException;
+import com.razorpay.RazorpayException;
 import jakarta.servlet.http.HttpServletRequest;
+import org.json.JSONException;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -97,6 +99,20 @@ public class GlobalExceptionHandler
     {
         return ResponseEntity.status(HttpStatus.CONFLICT).body(ExceptionResponse.builder().
                 msg("\"The Item You are trying to interact with has been modified. Please try again!\"")
+                .path(request.getRequestURI()).build());
+    }
+
+    @ExceptionHandler(RazorpayException.class)
+    public ResponseEntity<ExceptionResponse> razorpayHandle(HttpServletRequest request,RazorpayException e)
+    {
+        return ResponseEntity.status(HttpStatus.BAD_GATEWAY).body(ExceptionResponse.builder().msg("RazorPay server is temporarily down. Please try again after some time!")
+                .path(request.getRequestURI()).build());
+    }
+
+    @ExceptionHandler(JSONException.class)
+    public ResponseEntity<ExceptionResponse> razorpayHandle(HttpServletRequest request,JSONException e)
+    {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ExceptionResponse.builder().msg("Invalid Request! Please enter valid value.")
                 .path(request.getRequestURI()).build());
     }
 

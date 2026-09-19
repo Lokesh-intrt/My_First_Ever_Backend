@@ -1,0 +1,51 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Razorpay Test</title>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+  <button onclick="pay()">Pay ₹40</button>
+
+  <script>
+    async function pay() {
+      const response = await fetch("/api/razorpay/checkout", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJsb2tlc2hAZ21haWwuY29tIiwiaWF0IjoxNzg5NjM5NzA0LCJleHAiOjE3ODk2NDA2MDR9.1dIO52qKdHg6FJ1xGSnWZnQ1-j6vH5vsiVEyZ9dlc5k"
+        },
+        body: JSON.stringify({
+          orderId: 2,
+          amount: 40,
+          currencyType: "INR"
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error(await response.text());
+      }
+
+      const data = await response.json();
+
+      const options = {
+        key: data.keyId,
+        amount: data.amount,
+        currency: data.currencyType,
+        order_id: data.orderId,
+        name: "Test Store",
+        description: "Test payment",
+        handler: function (paymentResponse) {
+          console.log("Payment successful:", paymentResponse);
+          alert("Payment successful");
+        }
+      };
+
+      new Razorpay(options).open();
+    }
+  </script>
+</body>
+</html>
+
+
