@@ -1,0 +1,801 @@
+2026-09-17T14:03:33.299+05:30  INFO 15720 --- [project1] [main] c.example.project1.Project1Application   : Starting Project1Application using Java 24.0.2 with PID 15720 (C:\SBP\project1\target\classes started by lokes in C:\SBP\project1)
+2026-09-17T14:03:33.305+05:30  INFO 15720 --- [project1] [main] c.example.project1.Project1Application   : No active profile set, falling back to 1 default profile: "default"
+2026-09-17T14:03:34.103+05:30  INFO 15720 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-17T14:03:34.165+05:30  INFO 15720 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 6 JPA repository interfaces.
+2026-09-17T14:03:34.651+05:30  INFO 15720 --- [project1] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8082 (http)
+2026-09-17T14:03:34.665+05:30  INFO 15720 --- [project1] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-17T14:03:34.666+05:30  INFO 15720 --- [project1] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-09-17T14:03:34.722+05:30  INFO 15720 --- [project1] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1345 ms
+2026-09-17T14:03:34.923+05:30  INFO 15720 --- [project1] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-17T14:03:35.279+05:30  INFO 15720 --- [project1] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@149d7cc6
+2026-09-17T14:03:35.281+05:30  INFO 15720 --- [project1] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-17T14:03:35.308+05:30  INFO 15720 --- [project1] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/project1 (MySQL 8.0)
+2026-09-17T14:03:35.424+05:30  INFO 15720 --- [project1] [main] o.f.core.internal.command.DbValidate     : Successfully validated 6 migrations (execution time 00:00.052s)
+2026-09-17T14:03:35.444+05:30  INFO 15720 --- [project1] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `project1`: 6
+2026-09-17T14:03:35.451+05:30  INFO 15720 --- [project1] [main] o.f.core.internal.command.DbMigrate      : Schema `project1` is up to date. No migration necessary.
+2026-09-17T14:03:35.547+05:30  INFO 15720 --- [project1] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-17T14:03:35.615+05:30  INFO 15720 --- [project1] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-09-17T14:03:35.970+05:30  INFO 15720 --- [project1] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-17T14:03:36.054+05:30  INFO 15720 --- [project1] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/project1]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: project1/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-17T14:03:36.873+05:30  INFO 15720 --- [project1] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-17T14:03:36.915+05:30  INFO 15720 --- [project1] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-17T14:03:37.030+05:30  INFO 15720 --- [project1] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-09-17T14:03:37.299+05:30  INFO 15720 --- [project1] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetails
+2026-09-17T14:03:37.617+05:30  WARN 15720 --- [project1] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-17T14:03:37.820+05:30 DEBUG 15720 --- [project1] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, OAuth2AuthorizationRequestRedirectFilter, OAuth2LoginAuthenticationFilter, JwtFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-09-17T14:03:38.189+05:30  INFO 15720 --- [project1] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8082 (http) with context path '/'
+2026-09-17T14:03:38.195+05:30  INFO 15720 --- [project1] [main] c.example.project1.Project1Application   : Started Project1Application in 5.305 seconds (process running for 5.645)
+2026-09-17T14:03:38.199+05:30  WARN 15720 --- [project1] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-17T14:03:38.199+05:30  WARN 15720 --- [project1] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-17T14:03:42.281+05:30  INFO 15720 --- [project1] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-17T14:03:42.282+05:30  INFO 15720 --- [project1] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-17T14:03:42.283+05:30  INFO 15720 --- [project1] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-09-17T14:03:42.294+05:30 DEBUG 15720 --- [project1] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2026-09-17T14:03:42.301+05:30 TRACE 15720 --- [project1] [http-nio-8082-exec-1] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T14:03:42.303+05:30 DEBUG 15720 --- [project1] [http-nio-8082-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-09-17T14:03:42.304+05:30 DEBUG 15720 --- [project1] [http-nio-8082-exec-1] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id CCD6B636E3FCE4FB8E000EBD8231CE13
+2026-09-17T14:03:42.306+05:30 DEBUG 15720 --- [project1] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2026-09-17T14:03:43.094+05:30 DEBUG 15720 --- [project1] [http-nio-8082-exec-1] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2026-09-17T14:03:43.127+05:30  INFO 15720 --- [project1] [http-nio-8082-exec-1] c.example.project1.service.UserService   : User:lokesh@gmail.com successfully logged in
+2026-09-17T14:06:24.610+05:30 DEBUG 15720 --- [project1] [http-nio-8082-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/razorpay/checkout
+2026-09-17T14:06:24.611+05:30 TRACE 15720 --- [project1] [http-nio-8082-exec-4] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T14:06:24.689+05:30 DEBUG 15720 --- [project1] [http-nio-8082-exec-4] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=lokesh@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.apache.catalina.session.StandardSessionFacade@69c41eb4]
+2026-09-17T14:06:24.690+05:30 DEBUG 15720 --- [project1] [http-nio-8082-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/razorpay/checkout
+2026-09-17T14:10:35.017+05:30 DEBUG 15720 --- [project1] [http-nio-8082-exec-8] s.s.w.f.HttpStatusRequestRejectedHandler : Rejecting request due to: The request was rejected because the URL contained a potentially malicious String "%0A"
+
+org.springframework.security.web.firewall.RequestRejectedException: The request was rejected because the URL contained a potentially malicious String "%0A"
+	at org.springframework.security.web.firewall.StrictHttpFirewall.rejectedBlocklistedUrls(StrictHttpFirewall.java:548) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.security.web.firewall.StrictHttpFirewall.getFirewalledRequest(StrictHttpFirewall.java:518) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317) ~[spring-security-config-7.1.1.jar:7.1.1]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:535) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:406) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1307) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2036) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:949) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:483) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at java.base/java.lang.Thread.run(Thread.java:1447) ~[na:na]
+
+2026-09-17T14:10:35.030+05:30 DEBUG 15720 --- [project1] [http-nio-8082-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /error
+2026-09-17T14:10:35.031+05:30 TRACE 15720 --- [project1] [http-nio-8082-exec-8] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T14:10:35.064+05:30 DEBUG 15720 --- [project1] [http-nio-8082-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-09-17T14:10:35.065+05:30 DEBUG 15720 --- [project1] [http-nio-8082-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /error
+2026-09-17T14:13:04.587+05:30 DEBUG 15720 --- [project1] [http-nio-8082-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/razorpay/checkout
+2026-09-17T14:13:04.589+05:30 TRACE 15720 --- [project1] [http-nio-8082-exec-6] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T14:13:04.591+05:30 ERROR 15720 --- [project1] [http-nio-8082-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+java.lang.NullPointerException: email is marked non-null but is null
+	at com.example.project1.config.CustomUserDetails.loadUserByUsername(CustomUserDetails.java:20) ~[classes/:na]
+	at com.example.project1.security.JwtFilter.doFilterInternal(JwtFilter.java:72) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:245) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:239) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:195) ~[spring-security-oauth2-client-7.1.1.jar:7.1.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317) ~[spring-security-config-7.1.1.jar:7.1.1]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:535) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:406) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1307) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2036) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:949) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:483) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at java.base/java.lang.Thread.run(Thread.java:1447) ~[na:na]
+
+2026-09-17T14:13:04.598+05:30 DEBUG 15720 --- [project1] [http-nio-8082-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /error
+2026-09-17T14:13:04.599+05:30 TRACE 15720 --- [project1] [http-nio-8082-exec-6] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T14:13:04.601+05:30 DEBUG 15720 --- [project1] [http-nio-8082-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-09-17T14:13:04.602+05:30 DEBUG 15720 --- [project1] [http-nio-8082-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /error
+2026-09-17T14:19:31.149+05:30 DEBUG 15720 --- [project1] [http-nio-8082-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /api/razorpay/checkout
+2026-09-17T14:19:31.150+05:30 TRACE 15720 --- [project1] [http-nio-8082-exec-10] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T14:19:31.152+05:30 ERROR 15720 --- [project1] [http-nio-8082-exec-10] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+java.lang.NullPointerException: email is marked non-null but is null
+	at com.example.project1.config.CustomUserDetails.loadUserByUsername(CustomUserDetails.java:20) ~[classes/:na]
+	at com.example.project1.security.JwtFilter.doFilterInternal(JwtFilter.java:72) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:245) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:239) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter.doFilterInternal(OAuth2AuthorizationRequestRedirectFilter.java:195) ~[spring-security-oauth2-client-7.1.1.jar:7.1.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195) ~[spring-security-web-7.1.1.jar:7.1.1]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317) ~[spring-security-config-7.1.1.jar:7.1.1]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.9.jar:7.0.9]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:535) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:406) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1307) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2036) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:949) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:483) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74) ~[tomcat-embed-core-11.0.24.jar:11.0.24]
+	at java.base/java.lang.Thread.run(Thread.java:1447) ~[na:na]
+
+2026-09-17T14:19:31.155+05:30 DEBUG 15720 --- [project1] [http-nio-8082-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /error
+2026-09-17T14:19:31.155+05:30 TRACE 15720 --- [project1] [http-nio-8082-exec-10] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T14:19:31.156+05:30 DEBUG 15720 --- [project1] [http-nio-8082-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-09-17T14:19:31.157+05:30 DEBUG 15720 --- [project1] [http-nio-8082-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /error
+2026-09-17T14:20:40.534+05:30 DEBUG 15720 --- [project1] [http-nio-8082-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/razorpay/checkout
+2026-09-17T14:20:40.535+05:30 TRACE 15720 --- [project1] [http-nio-8082-exec-2] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T14:20:40.536+05:30  WARN 15720 --- [project1] [http-nio-8082-exec-2] c.example.project1.security.JwtFilter    : JWT auth failed: Invalid or expired JWT token
+2026-09-17T14:21:34.341+05:30 DEBUG 15720 --- [project1] [http-nio-8082-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/razorpay/checkout
+2026-09-17T14:21:34.342+05:30 TRACE 15720 --- [project1] [http-nio-8082-exec-4] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T14:21:34.343+05:30  WARN 15720 --- [project1] [http-nio-8082-exec-4] c.example.project1.security.JwtFilter    : JWT auth failed: Invalid or expired JWT token
+2026-09-17T14:21:44.194+05:30  INFO 15720 --- [project1] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-17T14:21:44.199+05:30  INFO 15720 --- [project1] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-17T14:21:44.204+05:30  INFO 15720 --- [project1] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-17T14:21:44.206+05:30  INFO 15720 --- [project1] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-17T14:21:44.210+05:30  INFO 15720 --- [project1] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-17T14:22:03.823+05:30  INFO 3256 --- [project1] [main] c.example.project1.Project1Application   : Starting Project1Application using Java 24.0.2 with PID 3256 (C:\SBP\project1\target\classes started by lokes in C:\SBP\project1)
+2026-09-17T14:22:03.825+05:30  INFO 3256 --- [project1] [main] c.example.project1.Project1Application   : No active profile set, falling back to 1 default profile: "default"
+2026-09-17T14:22:04.509+05:30  INFO 3256 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-17T14:22:04.563+05:30  INFO 3256 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 6 JPA repository interfaces.
+2026-09-17T14:22:05.023+05:30  INFO 3256 --- [project1] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8082 (http)
+2026-09-17T14:22:05.035+05:30  INFO 3256 --- [project1] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-17T14:22:05.035+05:30  INFO 3256 --- [project1] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-09-17T14:22:05.085+05:30  INFO 3256 --- [project1] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1200 ms
+2026-09-17T14:22:05.257+05:30  INFO 3256 --- [project1] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-17T14:22:05.617+05:30  INFO 3256 --- [project1] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5bb7a59
+2026-09-17T14:22:05.618+05:30  INFO 3256 --- [project1] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-17T14:22:05.645+05:30  INFO 3256 --- [project1] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/project1 (MySQL 8.0)
+2026-09-17T14:22:05.769+05:30  INFO 3256 --- [project1] [main] o.f.core.internal.command.DbValidate     : Successfully validated 6 migrations (execution time 00:00.054s)
+2026-09-17T14:22:05.785+05:30  INFO 3256 --- [project1] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `project1`: 6
+2026-09-17T14:22:05.790+05:30  INFO 3256 --- [project1] [main] o.f.core.internal.command.DbMigrate      : Schema `project1` is up to date. No migration necessary.
+2026-09-17T14:22:05.862+05:30  INFO 3256 --- [project1] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-17T14:22:05.925+05:30  INFO 3256 --- [project1] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-09-17T14:22:06.250+05:30  INFO 3256 --- [project1] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-17T14:22:06.338+05:30  INFO 3256 --- [project1] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/project1]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: project1/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-17T14:22:07.115+05:30  INFO 3256 --- [project1] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-17T14:22:07.152+05:30  INFO 3256 --- [project1] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-17T14:22:07.204+05:30  INFO 3256 --- [project1] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-09-17T14:22:07.420+05:30  INFO 3256 --- [project1] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetails
+2026-09-17T14:22:07.741+05:30  WARN 3256 --- [project1] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-17T14:22:07.940+05:30 DEBUG 3256 --- [project1] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, OAuth2AuthorizationRequestRedirectFilter, OAuth2LoginAuthenticationFilter, JwtFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-09-17T14:22:08.304+05:30  INFO 3256 --- [project1] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8082 (http) with context path '/'
+2026-09-17T14:22:08.314+05:30  INFO 3256 --- [project1] [main] c.example.project1.Project1Application   : Started Project1Application in 4.857 seconds (process running for 5.16)
+2026-09-17T14:22:08.317+05:30  WARN 3256 --- [project1] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-17T14:22:08.318+05:30  WARN 3256 --- [project1] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-17T14:22:11.457+05:30  INFO 3256 --- [project1] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-17T14:22:11.457+05:30  INFO 3256 --- [project1] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-17T14:22:11.458+05:30  INFO 3256 --- [project1] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-09-17T14:22:11.465+05:30 DEBUG 3256 --- [project1] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2026-09-17T14:22:11.471+05:30 TRACE 3256 --- [project1] [http-nio-8082-exec-1] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T14:22:11.474+05:30 DEBUG 3256 --- [project1] [http-nio-8082-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-09-17T14:22:11.474+05:30 DEBUG 3256 --- [project1] [http-nio-8082-exec-1] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 43A3FD3518E290C3C9A8827580FFD765
+2026-09-17T14:22:11.476+05:30 DEBUG 3256 --- [project1] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2026-09-17T14:22:11.992+05:30 DEBUG 3256 --- [project1] [http-nio-8082-exec-1] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2026-09-17T14:22:12.007+05:30  INFO 3256 --- [project1] [http-nio-8082-exec-1] c.example.project1.service.UserService   : User:lokesh@gmail.com successfully logged in
+2026-09-17T14:22:35.607+05:30 DEBUG 3256 --- [project1] [http-nio-8082-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/razorpay/checkout
+2026-09-17T14:22:35.608+05:30 TRACE 3256 --- [project1] [http-nio-8082-exec-3] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T14:22:35.760+05:30 DEBUG 3256 --- [project1] [http-nio-8082-exec-3] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=lokesh@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.apache.catalina.session.StandardSessionFacade@1e9b81d7]
+2026-09-17T14:22:35.761+05:30 DEBUG 3256 --- [project1] [http-nio-8082-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/razorpay/checkout
+2026-09-17T14:33:34.486+05:30 DEBUG 3256 --- [project1] [http-nio-8082-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2026-09-17T14:33:34.488+05:30 TRACE 3256 --- [project1] [http-nio-8082-exec-6] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T14:33:34.489+05:30 DEBUG 3256 --- [project1] [http-nio-8082-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-09-17T14:33:34.490+05:30 DEBUG 3256 --- [project1] [http-nio-8082-exec-6] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 43A3FD3518E290C3C9A8827580FFD765
+2026-09-17T14:33:34.490+05:30 DEBUG 3256 --- [project1] [http-nio-8082-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2026-09-17T14:33:34.569+05:30 DEBUG 3256 --- [project1] [http-nio-8082-exec-6] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2026-09-17T14:33:34.570+05:30  INFO 3256 --- [project1] [http-nio-8082-exec-6] c.example.project1.service.UserService   : User:lokesh@gmail.com successfully logged in
+2026-09-17T14:34:05.656+05:30  INFO 3256 --- [project1] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-17T14:34:05.660+05:30  INFO 3256 --- [project1] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-17T14:34:05.666+05:30  INFO 3256 --- [project1] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-17T14:34:05.668+05:30  INFO 3256 --- [project1] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-17T14:34:05.674+05:30  INFO 3256 --- [project1] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-17T14:34:15.561+05:30  INFO 4592 --- [project1] [main] c.example.project1.Project1Application   : Starting Project1Application using Java 24.0.2 with PID 4592 (C:\SBP\project1\target\classes started by lokes in C:\SBP\project1)
+2026-09-17T14:34:15.563+05:30  INFO 4592 --- [project1] [main] c.example.project1.Project1Application   : No active profile set, falling back to 1 default profile: "default"
+2026-09-17T14:34:16.179+05:30  INFO 4592 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-17T14:34:16.225+05:30  INFO 4592 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 6 JPA repository interfaces.
+2026-09-17T14:34:16.627+05:30  INFO 4592 --- [project1] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8082 (http)
+2026-09-17T14:34:16.637+05:30  INFO 4592 --- [project1] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-17T14:34:16.637+05:30  INFO 4592 --- [project1] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-09-17T14:34:16.683+05:30  INFO 4592 --- [project1] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1073 ms
+2026-09-17T14:34:16.840+05:30  INFO 4592 --- [project1] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-17T14:34:17.091+05:30  INFO 4592 --- [project1] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@62faf77
+2026-09-17T14:34:17.093+05:30  INFO 4592 --- [project1] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-17T14:34:17.115+05:30  INFO 4592 --- [project1] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/project1 (MySQL 8.0)
+2026-09-17T14:34:17.184+05:30  INFO 4592 --- [project1] [main] o.f.core.internal.command.DbValidate     : Successfully validated 6 migrations (execution time 00:00.025s)
+2026-09-17T14:34:17.201+05:30  INFO 4592 --- [project1] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `project1`: 6
+2026-09-17T14:34:17.205+05:30  INFO 4592 --- [project1] [main] o.f.core.internal.command.DbMigrate      : Schema `project1` is up to date. No migration necessary.
+2026-09-17T14:34:17.287+05:30  INFO 4592 --- [project1] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-17T14:34:17.327+05:30  INFO 4592 --- [project1] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-09-17T14:34:17.622+05:30  INFO 4592 --- [project1] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-17T14:34:17.679+05:30  INFO 4592 --- [project1] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/project1]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: project1/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-17T14:34:18.344+05:30  INFO 4592 --- [project1] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-17T14:34:18.373+05:30  INFO 4592 --- [project1] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-17T14:34:18.421+05:30  INFO 4592 --- [project1] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-09-17T14:34:18.599+05:30  INFO 4592 --- [project1] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetails
+2026-09-17T14:34:18.884+05:30  WARN 4592 --- [project1] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-17T14:34:19.075+05:30 DEBUG 4592 --- [project1] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, OAuth2AuthorizationRequestRedirectFilter, OAuth2LoginAuthenticationFilter, JwtFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-09-17T14:34:19.395+05:30  INFO 4592 --- [project1] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8082 (http) with context path '/'
+2026-09-17T14:34:19.400+05:30  INFO 4592 --- [project1] [main] c.example.project1.Project1Application   : Started Project1Application in 4.174 seconds (process running for 4.463)
+2026-09-17T14:34:19.402+05:30  WARN 4592 --- [project1] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-17T14:34:19.402+05:30  WARN 4592 --- [project1] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-17T14:34:39.037+05:30  INFO 4592 --- [project1] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-17T14:34:39.038+05:30  INFO 4592 --- [project1] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-17T14:34:39.041+05:30  INFO 4592 --- [project1] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-09-17T14:34:39.064+05:30 DEBUG 4592 --- [project1] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /testRazorpay.html
+2026-09-17T14:34:39.078+05:30 TRACE 4592 --- [project1] [http-nio-8082-exec-1] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T14:34:39.079+05:30  WARN 4592 --- [project1] [http-nio-8082-exec-1] c.example.project1.security.JwtFilter    : JWT auth failed: Missing Authorization header. Use: Authorization: Bearer <token>
+2026-09-17T14:34:39.153+05:30 DEBUG 4592 --- [project1] [http-nio-8082-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2026-09-17T14:34:39.155+05:30 TRACE 4592 --- [project1] [http-nio-8082-exec-2] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T14:34:39.156+05:30  WARN 4592 --- [project1] [http-nio-8082-exec-2] c.example.project1.security.JwtFilter    : JWT auth failed: Missing Authorization header. Use: Authorization: Bearer <token>
+2026-09-17T14:38:24.901+05:30 DEBUG 4592 --- [project1] [http-nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /.well-known/appspecific/com.chrome.devtools.json
+2026-09-17T14:38:24.902+05:30 TRACE 4592 --- [project1] [http-nio-8082-exec-5] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T14:38:24.902+05:30  WARN 4592 --- [project1] [http-nio-8082-exec-5] c.example.project1.security.JwtFilter    : JWT auth failed: Missing Authorization header. Use: Authorization: Bearer <token>
+2026-09-17T14:38:47.700+05:30 DEBUG 4592 --- [project1] [http-nio-8082-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /testRazorpay.html
+2026-09-17T14:38:47.701+05:30 TRACE 4592 --- [project1] [http-nio-8082-exec-6] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T14:38:47.705+05:30  WARN 4592 --- [project1] [http-nio-8082-exec-6] c.example.project1.security.JwtFilter    : JWT auth failed: Missing Authorization header. Use: Authorization: Bearer <token>
+2026-09-17T14:38:47.956+05:30 DEBUG 4592 --- [project1] [http-nio-8082-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2026-09-17T14:38:47.958+05:30 TRACE 4592 --- [project1] [http-nio-8082-exec-7] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T14:38:47.959+05:30  WARN 4592 --- [project1] [http-nio-8082-exec-7] c.example.project1.security.JwtFilter    : JWT auth failed: Missing Authorization header. Use: Authorization: Bearer <token>
+2026-09-17T14:38:47.975+05:30 DEBUG 4592 --- [project1] [http-nio-8082-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /.well-known/appspecific/com.chrome.devtools.json
+2026-09-17T14:38:47.976+05:30 TRACE 4592 --- [project1] [http-nio-8082-exec-8] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T14:38:47.977+05:30  WARN 4592 --- [project1] [http-nio-8082-exec-8] c.example.project1.security.JwtFilter    : JWT auth failed: Missing Authorization header. Use: Authorization: Bearer <token>
+2026-09-17T14:38:50.671+05:30 DEBUG 4592 --- [project1] [http-nio-8082-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /testRazorpay.html
+2026-09-17T14:38:50.673+05:30 TRACE 4592 --- [project1] [http-nio-8082-exec-9] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T14:38:50.674+05:30  WARN 4592 --- [project1] [http-nio-8082-exec-9] c.example.project1.security.JwtFilter    : JWT auth failed: Missing Authorization header. Use: Authorization: Bearer <token>
+2026-09-17T14:38:50.716+05:30 DEBUG 4592 --- [project1] [http-nio-8082-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2026-09-17T14:38:50.718+05:30 TRACE 4592 --- [project1] [http-nio-8082-exec-10] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T14:38:50.719+05:30  WARN 4592 --- [project1] [http-nio-8082-exec-10] c.example.project1.security.JwtFilter    : JWT auth failed: Missing Authorization header. Use: Authorization: Bearer <token>
+2026-09-17T14:41:54.287+05:30  INFO 4592 --- [project1] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-17T14:41:54.290+05:30  INFO 4592 --- [project1] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-17T14:41:54.293+05:30  INFO 4592 --- [project1] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-17T14:41:54.295+05:30  INFO 4592 --- [project1] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-17T14:41:54.302+05:30  INFO 4592 --- [project1] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-17T14:42:06.802+05:30  INFO 2732 --- [project1] [main] c.example.project1.Project1Application   : Starting Project1Application using Java 24.0.2 with PID 2732 (C:\SBP\project1\target\classes started by lokes in C:\SBP\project1)
+2026-09-17T14:42:06.805+05:30  INFO 2732 --- [project1] [main] c.example.project1.Project1Application   : No active profile set, falling back to 1 default profile: "default"
+2026-09-17T14:42:07.461+05:30  INFO 2732 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-17T14:42:07.516+05:30  INFO 2732 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 6 JPA repository interfaces.
+2026-09-17T14:42:07.925+05:30  INFO 2732 --- [project1] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8082 (http)
+2026-09-17T14:42:07.935+05:30  INFO 2732 --- [project1] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-17T14:42:07.936+05:30  INFO 2732 --- [project1] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-09-17T14:42:07.975+05:30  INFO 2732 --- [project1] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1104 ms
+2026-09-17T14:42:08.134+05:30  INFO 2732 --- [project1] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-17T14:42:08.385+05:30  INFO 2732 --- [project1] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@62faf77
+2026-09-17T14:42:08.387+05:30  INFO 2732 --- [project1] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-17T14:42:08.411+05:30  INFO 2732 --- [project1] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/project1 (MySQL 8.0)
+2026-09-17T14:42:08.475+05:30  INFO 2732 --- [project1] [main] o.f.core.internal.command.DbValidate     : Successfully validated 6 migrations (execution time 00:00.024s)
+2026-09-17T14:42:08.492+05:30  INFO 2732 --- [project1] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `project1`: 6
+2026-09-17T14:42:08.496+05:30  INFO 2732 --- [project1] [main] o.f.core.internal.command.DbMigrate      : Schema `project1` is up to date. No migration necessary.
+2026-09-17T14:42:08.565+05:30  INFO 2732 --- [project1] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-17T14:42:08.603+05:30  INFO 2732 --- [project1] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-09-17T14:42:08.880+05:30  INFO 2732 --- [project1] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-17T14:42:08.942+05:30  INFO 2732 --- [project1] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/project1]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: project1/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-17T14:42:09.594+05:30  INFO 2732 --- [project1] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-17T14:42:09.626+05:30  INFO 2732 --- [project1] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-17T14:42:09.675+05:30  INFO 2732 --- [project1] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-09-17T14:42:09.866+05:30  INFO 2732 --- [project1] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetails
+2026-09-17T14:42:10.135+05:30  WARN 2732 --- [project1] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-17T14:42:10.313+05:30 DEBUG 2732 --- [project1] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, OAuth2AuthorizationRequestRedirectFilter, OAuth2LoginAuthenticationFilter, JwtFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-09-17T14:42:10.655+05:30  INFO 2732 --- [project1] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8082 (http) with context path '/'
+2026-09-17T14:42:10.662+05:30  INFO 2732 --- [project1] [main] c.example.project1.Project1Application   : Started Project1Application in 4.212 seconds (process running for 4.492)
+2026-09-17T14:42:10.665+05:30  WARN 2732 --- [project1] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-17T14:42:10.665+05:30  WARN 2732 --- [project1] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-17T14:42:16.816+05:30  INFO 2732 --- [project1] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-17T14:42:16.816+05:30  INFO 2732 --- [project1] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-17T14:42:16.818+05:30  INFO 2732 --- [project1] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-09-17T14:42:16.823+05:30 DEBUG 2732 --- [project1] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2026-09-17T14:42:16.827+05:30 TRACE 2732 --- [project1] [http-nio-8082-exec-1] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T14:42:16.829+05:30 DEBUG 2732 --- [project1] [http-nio-8082-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-09-17T14:42:16.829+05:30 DEBUG 2732 --- [project1] [http-nio-8082-exec-1] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 43A3FD3518E290C3C9A8827580FFD765
+2026-09-17T14:42:16.830+05:30 DEBUG 2732 --- [project1] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2026-09-17T14:42:17.290+05:30 DEBUG 2732 --- [project1] [http-nio-8082-exec-1] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2026-09-17T14:42:17.309+05:30  INFO 2732 --- [project1] [http-nio-8082-exec-1] c.example.project1.service.UserService   : User:lokesh@gmail.com successfully logged in
+2026-09-17T14:42:58.242+05:30  INFO 2732 --- [project1] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-17T14:42:58.247+05:30  INFO 2732 --- [project1] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-17T14:42:58.255+05:30  INFO 2732 --- [project1] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-17T14:42:58.258+05:30  INFO 2732 --- [project1] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-17T14:42:58.263+05:30  INFO 2732 --- [project1] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-17T14:43:05.206+05:30  INFO 16200 --- [project1] [main] c.example.project1.Project1Application   : Starting Project1Application using Java 24.0.2 with PID 16200 (C:\SBP\project1\target\classes started by lokes in C:\SBP\project1)
+2026-09-17T14:43:05.208+05:30  INFO 16200 --- [project1] [main] c.example.project1.Project1Application   : No active profile set, falling back to 1 default profile: "default"
+2026-09-17T14:43:05.840+05:30  INFO 16200 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-17T14:43:05.891+05:30  INFO 16200 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 6 JPA repository interfaces.
+2026-09-17T14:43:06.292+05:30  INFO 16200 --- [project1] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8082 (http)
+2026-09-17T14:43:06.302+05:30  INFO 16200 --- [project1] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-17T14:43:06.303+05:30  INFO 16200 --- [project1] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-09-17T14:43:06.348+05:30  INFO 16200 --- [project1] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1093 ms
+2026-09-17T14:43:06.506+05:30  INFO 16200 --- [project1] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-17T14:43:06.755+05:30  INFO 16200 --- [project1] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@62faf77
+2026-09-17T14:43:06.757+05:30  INFO 16200 --- [project1] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-17T14:43:06.777+05:30  INFO 16200 --- [project1] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/project1 (MySQL 8.0)
+2026-09-17T14:43:06.849+05:30  INFO 16200 --- [project1] [main] o.f.core.internal.command.DbValidate     : Successfully validated 6 migrations (execution time 00:00.027s)
+2026-09-17T14:43:06.866+05:30  INFO 16200 --- [project1] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `project1`: 6
+2026-09-17T14:43:06.879+05:30  INFO 16200 --- [project1] [main] o.f.core.internal.command.DbMigrate      : Schema `project1` is up to date. No migration necessary.
+2026-09-17T14:43:06.953+05:30  INFO 16200 --- [project1] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-17T14:43:06.996+05:30  INFO 16200 --- [project1] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-09-17T14:43:07.287+05:30  INFO 16200 --- [project1] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-17T14:43:07.345+05:30  INFO 16200 --- [project1] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/project1]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: project1/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-17T14:43:08.027+05:30  INFO 16200 --- [project1] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-17T14:43:08.060+05:30  INFO 16200 --- [project1] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-17T14:43:08.108+05:30  INFO 16200 --- [project1] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-09-17T14:43:08.285+05:30  INFO 16200 --- [project1] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetails
+2026-09-17T14:43:08.579+05:30  WARN 16200 --- [project1] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-17T14:43:08.775+05:30 DEBUG 16200 --- [project1] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, OAuth2AuthorizationRequestRedirectFilter, OAuth2LoginAuthenticationFilter, JwtFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-09-17T14:43:09.140+05:30  INFO 16200 --- [project1] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8082 (http) with context path '/'
+2026-09-17T14:43:09.145+05:30  INFO 16200 --- [project1] [main] c.example.project1.Project1Application   : Started Project1Application in 4.285 seconds (process running for 4.607)
+2026-09-17T14:43:09.147+05:30  WARN 16200 --- [project1] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-17T14:43:09.148+05:30  WARN 16200 --- [project1] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-17T14:43:37.174+05:30  INFO 16200 --- [project1] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-17T14:43:37.175+05:30  INFO 16200 --- [project1] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-17T14:43:37.179+05:30  INFO 16200 --- [project1] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-09-17T14:43:37.199+05:30 DEBUG 16200 --- [project1] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /testRazorpay.html
+2026-09-17T14:43:37.214+05:30 TRACE 16200 --- [project1] [http-nio-8082-exec-1] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T14:43:37.215+05:30  WARN 16200 --- [project1] [http-nio-8082-exec-1] c.example.project1.security.JwtFilter    : JWT auth failed: Missing Authorization header. Use: Authorization: Bearer <token>
+2026-09-17T14:43:37.267+05:30 DEBUG 16200 --- [project1] [http-nio-8082-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2026-09-17T14:43:37.269+05:30 TRACE 16200 --- [project1] [http-nio-8082-exec-4] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T14:43:37.269+05:30  WARN 16200 --- [project1] [http-nio-8082-exec-4] c.example.project1.security.JwtFilter    : JWT auth failed: Missing Authorization header. Use: Authorization: Bearer <token>
+2026-09-17T14:44:58.602+05:30  INFO 16200 --- [project1] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-17T14:44:58.609+05:30  INFO 16200 --- [project1] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-17T14:44:58.614+05:30  INFO 16200 --- [project1] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-17T14:44:58.616+05:30  INFO 16200 --- [project1] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-17T14:44:58.621+05:30  INFO 16200 --- [project1] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-17T14:45:11.067+05:30  INFO 6628 --- [project1] [main] c.example.project1.Project1Application   : Starting Project1Application using Java 24.0.2 with PID 6628 (C:\SBP\project1\target\classes started by lokes in C:\SBP\project1)
+2026-09-17T14:45:11.069+05:30  INFO 6628 --- [project1] [main] c.example.project1.Project1Application   : No active profile set, falling back to 1 default profile: "default"
+2026-09-17T14:45:11.733+05:30  INFO 6628 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-17T14:45:11.780+05:30  INFO 6628 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 6 JPA repository interfaces.
+2026-09-17T14:45:12.195+05:30  INFO 6628 --- [project1] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8082 (http)
+2026-09-17T14:45:12.206+05:30  INFO 6628 --- [project1] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-17T14:45:12.207+05:30  INFO 6628 --- [project1] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-09-17T14:45:12.249+05:30  INFO 6628 --- [project1] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1136 ms
+2026-09-17T14:45:12.418+05:30  INFO 6628 --- [project1] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-17T14:45:12.669+05:30  INFO 6628 --- [project1] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3a5b7d7e
+2026-09-17T14:45:12.671+05:30  INFO 6628 --- [project1] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-17T14:45:12.692+05:30  INFO 6628 --- [project1] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/project1 (MySQL 8.0)
+2026-09-17T14:45:12.752+05:30  INFO 6628 --- [project1] [main] o.f.core.internal.command.DbValidate     : Successfully validated 6 migrations (execution time 00:00.023s)
+2026-09-17T14:45:12.766+05:30  INFO 6628 --- [project1] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `project1`: 6
+2026-09-17T14:45:12.770+05:30  INFO 6628 --- [project1] [main] o.f.core.internal.command.DbMigrate      : Schema `project1` is up to date. No migration necessary.
+2026-09-17T14:45:12.847+05:30  INFO 6628 --- [project1] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-17T14:45:12.881+05:30  INFO 6628 --- [project1] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-09-17T14:45:13.145+05:30  INFO 6628 --- [project1] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-17T14:45:13.199+05:30  INFO 6628 --- [project1] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/project1]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: project1/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-17T14:45:13.899+05:30  INFO 6628 --- [project1] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-17T14:45:13.934+05:30  INFO 6628 --- [project1] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-17T14:45:13.978+05:30  INFO 6628 --- [project1] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-09-17T14:45:14.166+05:30  INFO 6628 --- [project1] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetails
+2026-09-17T14:45:14.461+05:30  WARN 6628 --- [project1] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-17T14:45:14.657+05:30 DEBUG 6628 --- [project1] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, OAuth2AuthorizationRequestRedirectFilter, OAuth2LoginAuthenticationFilter, JwtFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-09-17T14:45:15.024+05:30  INFO 6628 --- [project1] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8082 (http) with context path '/'
+2026-09-17T14:45:15.029+05:30  INFO 6628 --- [project1] [main] c.example.project1.Project1Application   : Started Project1Application in 4.387 seconds (process running for 4.783)
+2026-09-17T14:45:15.032+05:30  WARN 6628 --- [project1] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-17T14:45:15.032+05:30  WARN 6628 --- [project1] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-17T14:46:22.154+05:30  INFO 6628 --- [project1] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-17T14:46:22.155+05:30  INFO 6628 --- [project1] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-17T14:46:22.158+05:30  INFO 6628 --- [project1] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-09-17T14:46:22.176+05:30 DEBUG 6628 --- [project1] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /testRazorpay.html
+2026-09-17T14:46:22.190+05:30 TRACE 6628 --- [project1] [http-nio-8082-exec-1] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T14:46:22.216+05:30 DEBUG 6628 --- [project1] [http-nio-8082-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-09-17T14:46:22.217+05:30 DEBUG 6628 --- [project1] [http-nio-8082-exec-1] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 3FA88912831AF8F755A2CCDDEAF48254
+2026-09-17T14:46:22.219+05:30 DEBUG 6628 --- [project1] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /testRazorpay.html
+2026-09-17T14:46:23.132+05:30 DEBUG 6628 --- [project1] [http-nio-8082-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2026-09-17T14:46:23.132+05:30 TRACE 6628 --- [project1] [http-nio-8082-exec-2] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T14:46:23.132+05:30  WARN 6628 --- [project1] [http-nio-8082-exec-2] c.example.project1.security.JwtFilter    : JWT auth failed: Missing Authorization header. Use: Authorization: Bearer <token>
+2026-09-17T14:46:24.863+05:30 DEBUG 6628 --- [project1] [http-nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/razorpay/checkout
+2026-09-17T14:46:24.864+05:30 TRACE 6628 --- [project1] [http-nio-8082-exec-5] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T14:46:25.717+05:30 DEBUG 6628 --- [project1] [http-nio-8082-exec-5] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=lokesh@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.apache.catalina.session.StandardSessionFacade@6994abc1]
+2026-09-17T14:46:25.718+05:30 DEBUG 6628 --- [project1] [http-nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/razorpay/checkout
+2026-09-17T15:36:17.825+05:30  INFO 6628 --- [project1] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-17T15:36:17.837+05:30  INFO 6628 --- [project1] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-17T15:36:17.859+05:30  INFO 6628 --- [project1] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-17T15:36:17.873+05:30  INFO 6628 --- [project1] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-17T15:36:17.883+05:30  INFO 6628 --- [project1] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-17T15:36:31.515+05:30  INFO 23920 --- [project1] [main] c.example.project1.Project1Application   : Starting Project1Application using Java 24.0.2 with PID 23920 (C:\SBP\project1\target\classes started by lokes in C:\SBP\project1)
+2026-09-17T15:36:31.518+05:30  INFO 23920 --- [project1] [main] c.example.project1.Project1Application   : No active profile set, falling back to 1 default profile: "default"
+2026-09-17T15:36:32.340+05:30  INFO 23920 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-17T15:36:32.407+05:30  INFO 23920 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 6 JPA repository interfaces.
+2026-09-17T15:36:32.954+05:30  INFO 23920 --- [project1] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8082 (http)
+2026-09-17T15:36:32.967+05:30  INFO 23920 --- [project1] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-17T15:36:32.968+05:30  INFO 23920 --- [project1] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-09-17T15:36:33.027+05:30  INFO 23920 --- [project1] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1447 ms
+2026-09-17T15:36:33.221+05:30  INFO 23920 --- [project1] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-17T15:36:33.571+05:30  INFO 23920 --- [project1] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4f8659d0
+2026-09-17T15:36:33.573+05:30  INFO 23920 --- [project1] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-17T15:36:33.615+05:30  INFO 23920 --- [project1] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/project1 (MySQL 8.0)
+2026-09-17T15:36:33.710+05:30  INFO 23920 --- [project1] [main] o.f.core.internal.command.DbValidate     : Successfully validated 6 migrations (execution time 00:00.035s)
+2026-09-17T15:36:33.729+05:30  INFO 23920 --- [project1] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `project1`: 6
+2026-09-17T15:36:33.738+05:30  INFO 23920 --- [project1] [main] o.f.core.internal.command.DbMigrate      : Schema `project1` is up to date. No migration necessary.
+2026-09-17T15:36:33.843+05:30  INFO 23920 --- [project1] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-17T15:36:33.907+05:30  INFO 23920 --- [project1] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-09-17T15:36:34.308+05:30  INFO 23920 --- [project1] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-17T15:36:34.398+05:30  INFO 23920 --- [project1] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/project1]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: project1/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-17T15:36:35.364+05:30  INFO 23920 --- [project1] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-17T15:36:35.421+05:30  INFO 23920 --- [project1] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-17T15:36:35.483+05:30  INFO 23920 --- [project1] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-09-17T15:36:35.758+05:30  INFO 23920 --- [project1] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetails
+2026-09-17T15:36:36.186+05:30  WARN 23920 --- [project1] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-17T15:36:36.533+05:30 DEBUG 23920 --- [project1] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, OAuth2AuthorizationRequestRedirectFilter, OAuth2LoginAuthenticationFilter, JwtFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-09-17T15:36:37.003+05:30  INFO 23920 --- [project1] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8082 (http) with context path '/'
+2026-09-17T15:36:37.013+05:30  INFO 23920 --- [project1] [main] c.example.project1.Project1Application   : Started Project1Application in 5.957 seconds (process running for 6.342)
+2026-09-17T15:36:37.017+05:30  WARN 23920 --- [project1] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-17T15:36:37.018+05:30  WARN 23920 --- [project1] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-17T15:37:18.908+05:30  INFO 23920 --- [project1] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-17T15:37:18.909+05:30  INFO 23920 --- [project1] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-17T15:37:18.912+05:30  INFO 23920 --- [project1] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-09-17T15:37:18.933+05:30 DEBUG 23920 --- [project1] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /testRazorpay.html
+2026-09-17T15:37:18.948+05:30 TRACE 23920 --- [project1] [http-nio-8082-exec-1] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T15:37:18.976+05:30 DEBUG 23920 --- [project1] [http-nio-8082-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-09-17T15:37:18.977+05:30 DEBUG 23920 --- [project1] [http-nio-8082-exec-1] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 0A960D4C73BCA37B2D454D7FC899D24E
+2026-09-17T15:37:18.980+05:30 DEBUG 23920 --- [project1] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /testRazorpay.html
+2026-09-17T15:37:19.444+05:30 DEBUG 23920 --- [project1] [http-nio-8082-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2026-09-17T15:37:19.464+05:30 TRACE 23920 --- [project1] [http-nio-8082-exec-2] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T15:37:19.468+05:30  WARN 23920 --- [project1] [http-nio-8082-exec-2] c.example.project1.security.JwtFilter    : JWT auth failed: Missing Authorization header. Use: Authorization: Bearer <token>
+2026-09-17T15:37:21.009+05:30 DEBUG 23920 --- [project1] [http-nio-8082-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/razorpay/checkout
+2026-09-17T15:37:21.011+05:30 TRACE 23920 --- [project1] [http-nio-8082-exec-3] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T15:37:21.118+05:30  WARN 23920 --- [project1] [http-nio-8082-exec-3] c.example.project1.security.JwtFilter    : JWT auth failed: Invalid or expired JWT token
+2026-09-17T15:37:25.827+05:30 DEBUG 23920 --- [project1] [http-nio-8082-exec-10] o.s.security.web.FilterChainProxy        : Securing POST /api/razorpay/checkout
+2026-09-17T15:37:25.830+05:30 TRACE 23920 --- [project1] [http-nio-8082-exec-10] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T15:37:25.832+05:30  WARN 23920 --- [project1] [http-nio-8082-exec-10] c.example.project1.security.JwtFilter    : JWT auth failed: Invalid or expired JWT token
+2026-09-17T15:37:31.375+05:30 DEBUG 23920 --- [project1] [http-nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/razorpay/checkout
+2026-09-17T15:37:31.379+05:30 TRACE 23920 --- [project1] [http-nio-8082-exec-5] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T15:37:31.382+05:30  WARN 23920 --- [project1] [http-nio-8082-exec-5] c.example.project1.security.JwtFilter    : JWT auth failed: Invalid or expired JWT token
+2026-09-17T15:37:33.815+05:30 DEBUG 23920 --- [project1] [http-nio-8082-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/razorpay/checkout
+2026-09-17T15:37:33.820+05:30 TRACE 23920 --- [project1] [http-nio-8082-exec-6] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T15:37:33.821+05:30  WARN 23920 --- [project1] [http-nio-8082-exec-6] c.example.project1.security.JwtFilter    : JWT auth failed: Invalid or expired JWT token
+2026-09-17T15:37:35.935+05:30 DEBUG 23920 --- [project1] [http-nio-8082-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /api/razorpay/checkout
+2026-09-17T15:37:35.945+05:30 TRACE 23920 --- [project1] [http-nio-8082-exec-7] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T15:37:35.948+05:30  WARN 23920 --- [project1] [http-nio-8082-exec-7] c.example.project1.security.JwtFilter    : JWT auth failed: Invalid or expired JWT token
+2026-09-17T15:38:24.024+05:30 DEBUG 23920 --- [project1] [http-nio-8082-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2026-09-17T15:38:24.026+05:30 TRACE 23920 --- [project1] [http-nio-8082-exec-9] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T15:38:24.026+05:30 DEBUG 23920 --- [project1] [http-nio-8082-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-09-17T15:38:24.026+05:30 DEBUG 23920 --- [project1] [http-nio-8082-exec-9] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 43A3FD3518E290C3C9A8827580FFD765
+2026-09-17T15:38:24.027+05:30 DEBUG 23920 --- [project1] [http-nio-8082-exec-9] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2026-09-17T15:38:24.723+05:30 DEBUG 23920 --- [project1] [http-nio-8082-exec-9] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2026-09-17T15:38:24.734+05:30  INFO 23920 --- [project1] [http-nio-8082-exec-9] c.example.project1.service.UserService   : User:lokesh@gmail.com successfully logged in
+2026-09-17T15:38:41.823+05:30  INFO 23920 --- [project1] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-17T15:38:41.835+05:30  INFO 23920 --- [project1] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-17T15:38:41.845+05:30  INFO 23920 --- [project1] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-17T15:38:41.848+05:30  INFO 23920 --- [project1] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-17T15:38:41.866+05:30  INFO 23920 --- [project1] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-17T15:38:52.891+05:30  INFO 728 --- [project1] [main] c.example.project1.Project1Application   : Starting Project1Application using Java 24.0.2 with PID 728 (C:\SBP\project1\target\classes started by lokes in C:\SBP\project1)
+2026-09-17T15:38:52.894+05:30  INFO 728 --- [project1] [main] c.example.project1.Project1Application   : No active profile set, falling back to 1 default profile: "default"
+2026-09-17T15:38:53.672+05:30  INFO 728 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-17T15:38:53.726+05:30  INFO 728 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 6 JPA repository interfaces.
+2026-09-17T15:38:54.234+05:30  INFO 728 --- [project1] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8082 (http)
+2026-09-17T15:38:54.251+05:30  INFO 728 --- [project1] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-17T15:38:54.252+05:30  INFO 728 --- [project1] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-09-17T15:38:54.313+05:30  INFO 728 --- [project1] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1360 ms
+2026-09-17T15:38:54.615+05:30  INFO 728 --- [project1] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-17T15:38:54.916+05:30  INFO 728 --- [project1] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3b4bd341
+2026-09-17T15:38:54.918+05:30  INFO 728 --- [project1] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-17T15:38:54.946+05:30  INFO 728 --- [project1] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/project1 (MySQL 8.0)
+2026-09-17T15:38:55.023+05:30  INFO 728 --- [project1] [main] o.f.core.internal.command.DbValidate     : Successfully validated 6 migrations (execution time 00:00.031s)
+2026-09-17T15:38:55.044+05:30  INFO 728 --- [project1] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `project1`: 6
+2026-09-17T15:38:55.049+05:30  INFO 728 --- [project1] [main] o.f.core.internal.command.DbMigrate      : Schema `project1` is up to date. No migration necessary.
+2026-09-17T15:38:55.146+05:30  INFO 728 --- [project1] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-17T15:38:55.189+05:30  INFO 728 --- [project1] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-09-17T15:38:55.497+05:30  INFO 728 --- [project1] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-17T15:38:55.575+05:30  INFO 728 --- [project1] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/project1]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: project1/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-17T15:38:56.362+05:30  INFO 728 --- [project1] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-17T15:38:56.400+05:30  INFO 728 --- [project1] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-17T15:38:56.467+05:30  INFO 728 --- [project1] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-09-17T15:38:56.679+05:30  INFO 728 --- [project1] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetails
+2026-09-17T15:38:57.055+05:30  WARN 728 --- [project1] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-17T15:38:57.279+05:30 DEBUG 728 --- [project1] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, OAuth2AuthorizationRequestRedirectFilter, OAuth2LoginAuthenticationFilter, JwtFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-09-17T15:38:57.719+05:30  INFO 728 --- [project1] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8082 (http) with context path '/'
+2026-09-17T15:38:57.729+05:30  INFO 728 --- [project1] [main] c.example.project1.Project1Application   : Started Project1Application in 5.204 seconds (process running for 5.528)
+2026-09-17T15:38:57.733+05:30  WARN 728 --- [project1] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-17T15:38:57.733+05:30  WARN 728 --- [project1] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-17T15:39:17.614+05:30  INFO 728 --- [project1] [http-nio-8082-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-17T15:39:17.622+05:30  INFO 728 --- [project1] [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-17T15:39:17.629+05:30  INFO 728 --- [project1] [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-09-17T15:39:17.670+05:30 DEBUG 728 --- [project1] [http-nio-8082-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /testRazorpay.html
+2026-09-17T15:39:17.692+05:30 TRACE 728 --- [project1] [http-nio-8082-exec-2] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T15:39:17.846+05:30 DEBUG 728 --- [project1] [http-nio-8082-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-09-17T15:39:17.848+05:30 DEBUG 728 --- [project1] [http-nio-8082-exec-2] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 0A960D4C73BCA37B2D454D7FC899D24E
+2026-09-17T15:39:17.851+05:30 DEBUG 728 --- [project1] [http-nio-8082-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /testRazorpay.html
+2026-09-17T15:39:18.086+05:30 DEBUG 728 --- [project1] [http-nio-8082-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2026-09-17T15:39:18.087+05:30 TRACE 728 --- [project1] [http-nio-8082-exec-7] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T15:39:18.089+05:30  WARN 728 --- [project1] [http-nio-8082-exec-7] c.example.project1.security.JwtFilter    : JWT auth failed: Missing Authorization header. Use: Authorization: Bearer <token>
+2026-09-17T15:39:19.534+05:30 DEBUG 728 --- [project1] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/razorpay/checkout
+2026-09-17T15:39:19.536+05:30 TRACE 728 --- [project1] [http-nio-8082-exec-1] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T15:39:21.668+05:30 DEBUG 728 --- [project1] [http-nio-8082-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/razorpay/checkout
+2026-09-17T15:39:21.965+05:30 DEBUG 728 --- [project1] [http-nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/razorpay/checkout
+2026-09-17T15:39:21.969+05:30 DEBUG 728 --- [project1] [http-nio-8082-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/razorpay/checkout
+2026-09-17T15:39:21.997+05:30 TRACE 728 --- [project1] [http-nio-8082-exec-5] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T15:39:21.998+05:30 TRACE 728 --- [project1] [http-nio-8082-exec-4] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T15:39:22.002+05:30 TRACE 728 --- [project1] [http-nio-8082-exec-6] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T15:39:22.019+05:30 DEBUG 728 --- [project1] [http-nio-8082-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/razorpay/checkout
+2026-09-17T15:39:22.020+05:30 TRACE 728 --- [project1] [http-nio-8082-exec-3] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T15:39:22.338+05:30 DEBUG 728 --- [project1] [http-nio-8082-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/razorpay/checkout
+2026-09-17T15:39:22.340+05:30 TRACE 728 --- [project1] [http-nio-8082-exec-8] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T15:39:23.456+05:30 DEBUG 728 --- [project1] [http-nio-8082-exec-4] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=lokesh@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.apache.catalina.session.StandardSessionFacade@30a5da7e]
+2026-09-17T15:39:23.456+05:30 DEBUG 728 --- [project1] [http-nio-8082-exec-6] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=lokesh@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.apache.catalina.session.StandardSessionFacade@65640d85]
+2026-09-17T15:39:23.456+05:30 DEBUG 728 --- [project1] [http-nio-8082-exec-1] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=lokesh@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.apache.catalina.session.StandardSessionFacade@17070721]
+2026-09-17T15:39:23.457+05:30 DEBUG 728 --- [project1] [http-nio-8082-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/razorpay/checkout
+2026-09-17T15:39:23.456+05:30 DEBUG 728 --- [project1] [http-nio-8082-exec-8] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=lokesh@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.apache.catalina.session.StandardSessionFacade@3ad4145d]
+2026-09-17T15:39:23.458+05:30 DEBUG 728 --- [project1] [http-nio-8082-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /api/razorpay/checkout
+2026-09-17T15:39:23.456+05:30 DEBUG 728 --- [project1] [http-nio-8082-exec-5] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=lokesh@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.apache.catalina.session.StandardSessionFacade@12e8b69a]
+2026-09-17T15:39:23.456+05:30 DEBUG 728 --- [project1] [http-nio-8082-exec-3] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=lokesh@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.apache.catalina.session.StandardSessionFacade@5ef9b54e]
+2026-09-17T15:39:23.457+05:30 DEBUG 728 --- [project1] [http-nio-8082-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/razorpay/checkout
+2026-09-17T15:39:23.457+05:30 DEBUG 728 --- [project1] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/razorpay/checkout
+2026-09-17T15:39:23.460+05:30 DEBUG 728 --- [project1] [http-nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/razorpay/checkout
+2026-09-17T15:39:23.461+05:30 DEBUG 728 --- [project1] [http-nio-8082-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/razorpay/checkout
+2026-09-17T15:39:24.503+05:30 DEBUG 728 --- [project1] [http-nio-8082-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/razorpay/checkout
+2026-09-17T15:39:24.506+05:30 DEBUG 728 --- [project1] [http-nio-8082-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/razorpay/checkout
+2026-09-17T15:39:24.509+05:30 TRACE 728 --- [project1] [http-nio-8082-exec-6] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T15:39:24.507+05:30 DEBUG 728 --- [project1] [http-nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Securing POST /api/razorpay/checkout
+2026-09-17T15:39:24.513+05:30 TRACE 728 --- [project1] [http-nio-8082-exec-5] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T15:39:24.514+05:30 TRACE 728 --- [project1] [http-nio-8082-exec-8] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T15:39:24.519+05:30 DEBUG 728 --- [project1] [http-nio-8082-exec-8] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=lokesh@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.apache.catalina.session.StandardSessionFacade@27990bc9]
+2026-09-17T15:39:24.520+05:30 DEBUG 728 --- [project1] [http-nio-8082-exec-6] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=lokesh@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.apache.catalina.session.StandardSessionFacade@15bfb2b6]
+2026-09-17T15:39:24.521+05:30 DEBUG 728 --- [project1] [http-nio-8082-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /api/razorpay/checkout
+2026-09-17T15:39:24.521+05:30 DEBUG 728 --- [project1] [http-nio-8082-exec-5] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=lokesh@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.apache.catalina.session.StandardSessionFacade@e5e9f10]
+2026-09-17T15:39:24.521+05:30 DEBUG 728 --- [project1] [http-nio-8082-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/razorpay/checkout
+2026-09-17T15:39:24.525+05:30 DEBUG 728 --- [project1] [http-nio-8082-exec-5] o.s.security.web.FilterChainProxy        : Secured POST /api/razorpay/checkout
+2026-09-17T15:39:31.547+05:30 DEBUG 728 --- [project1] [http-nio-8082-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /testRazorpay.html
+2026-09-17T15:39:31.550+05:30 TRACE 728 --- [project1] [http-nio-8082-exec-9] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T15:39:31.551+05:30 DEBUG 728 --- [project1] [http-nio-8082-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /testRazorpay.html
+2026-09-17T15:39:31.559+05:30 DEBUG 728 --- [project1] [http-nio-8082-exec-9] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=lokesh@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]
+2026-09-17T15:39:31.634+05:30 DEBUG 728 --- [project1] [http-nio-8082-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2026-09-17T15:39:31.637+05:30 TRACE 728 --- [project1] [http-nio-8082-exec-10] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T15:39:31.638+05:30  WARN 728 --- [project1] [http-nio-8082-exec-10] c.example.project1.security.JwtFilter    : JWT auth failed: Missing Authorization header. Use: Authorization: Bearer <token>
+2026-09-17T15:39:32.867+05:30 DEBUG 728 --- [project1] [http-nio-8082-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /api/razorpay/checkout
+2026-09-17T15:39:32.870+05:30 TRACE 728 --- [project1] [http-nio-8082-exec-2] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T15:39:32.877+05:30 DEBUG 728 --- [project1] [http-nio-8082-exec-2] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=lokesh@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]]
+2026-09-17T15:39:32.879+05:30 DEBUG 728 --- [project1] [http-nio-8082-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /api/razorpay/checkout
+2026-09-17T15:46:54.611+05:30  INFO 728 --- [project1] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-17T15:46:54.628+05:30  INFO 728 --- [project1] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-17T15:46:54.634+05:30  INFO 728 --- [project1] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-17T15:46:54.636+05:30  INFO 728 --- [project1] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-17T15:46:54.665+05:30  INFO 728 --- [project1] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-17T15:47:12.109+05:30  INFO 4380 --- [project1] [main] c.example.project1.Project1Application   : Starting Project1Application using Java 24.0.2 with PID 4380 (C:\SBP\project1\target\classes started by lokes in C:\SBP\project1)
+2026-09-17T15:47:12.111+05:30  INFO 4380 --- [project1] [main] c.example.project1.Project1Application   : No active profile set, falling back to 1 default profile: "default"
+2026-09-17T15:47:12.870+05:30  INFO 4380 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-17T15:47:12.929+05:30  INFO 4380 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 6 JPA repository interfaces.
+2026-09-17T15:47:13.431+05:30  INFO 4380 --- [project1] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8082 (http)
+2026-09-17T15:47:13.444+05:30  INFO 4380 --- [project1] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-17T15:47:13.444+05:30  INFO 4380 --- [project1] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-09-17T15:47:13.495+05:30  INFO 4380 --- [project1] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1322 ms
+2026-09-17T15:47:13.689+05:30  INFO 4380 --- [project1] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-17T15:47:13.979+05:30  INFO 4380 --- [project1] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4f8659d0
+2026-09-17T15:47:13.981+05:30  INFO 4380 --- [project1] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-17T15:47:14.013+05:30  INFO 4380 --- [project1] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/project1 (MySQL 8.0)
+2026-09-17T15:47:14.096+05:30  INFO 4380 --- [project1] [main] o.f.core.internal.command.DbValidate     : Successfully validated 6 migrations (execution time 00:00.028s)
+2026-09-17T15:47:14.115+05:30  INFO 4380 --- [project1] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `project1`: 6
+2026-09-17T15:47:14.124+05:30  INFO 4380 --- [project1] [main] o.f.core.internal.command.DbMigrate      : Schema `project1` is up to date. No migration necessary.
+2026-09-17T15:47:14.225+05:30  INFO 4380 --- [project1] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-17T15:47:14.271+05:30  INFO 4380 --- [project1] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-09-17T15:47:14.605+05:30  INFO 4380 --- [project1] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-17T15:47:14.671+05:30  INFO 4380 --- [project1] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/project1]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: project1/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-17T15:47:15.486+05:30  INFO 4380 --- [project1] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-17T15:47:15.521+05:30  INFO 4380 --- [project1] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-17T15:47:15.580+05:30  INFO 4380 --- [project1] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-09-17T15:47:15.830+05:30  INFO 4380 --- [project1] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetails
+2026-09-17T15:47:16.219+05:30  WARN 4380 --- [project1] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-17T15:47:16.464+05:30 DEBUG 4380 --- [project1] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, OAuth2AuthorizationRequestRedirectFilter, OAuth2LoginAuthenticationFilter, JwtFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-09-17T15:47:16.955+05:30  INFO 4380 --- [project1] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8082 (http) with context path '/'
+2026-09-17T15:47:16.965+05:30  INFO 4380 --- [project1] [main] c.example.project1.Project1Application   : Started Project1Application in 5.311 seconds (process running for 5.688)
+2026-09-17T15:47:16.968+05:30  WARN 4380 --- [project1] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-09-17T15:47:16.968+05:30  WARN 4380 --- [project1] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-09-17T15:47:22.157+05:30  INFO 4380 --- [project1] [http-nio-8082-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-17T15:47:22.158+05:30  INFO 4380 --- [project1] [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-17T15:47:22.161+05:30  INFO 4380 --- [project1] [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-09-17T15:47:22.177+05:30 DEBUG 4380 --- [project1] [http-nio-8082-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /testRazorpay.html
+2026-09-17T15:47:22.193+05:30 TRACE 4380 --- [project1] [http-nio-8082-exec-2] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T15:47:22.228+05:30 DEBUG 4380 --- [project1] [http-nio-8082-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-09-17T15:47:22.229+05:30 DEBUG 4380 --- [project1] [http-nio-8082-exec-2] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id 1DA67CA80549BB9681FF7D73B487C845
+2026-09-17T15:47:22.233+05:30 DEBUG 4380 --- [project1] [http-nio-8082-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /testRazorpay.html
+2026-09-17T15:47:22.549+05:30 DEBUG 4380 --- [project1] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /favicon.ico
+2026-09-17T15:47:22.551+05:30 TRACE 4380 --- [project1] [http-nio-8082-exec-1] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T15:47:22.551+05:30  WARN 4380 --- [project1] [http-nio-8082-exec-1] c.example.project1.security.JwtFilter    : JWT auth failed: Missing Authorization header. Use: Authorization: Bearer <token>
+2026-09-17T15:47:26.014+05:30 DEBUG 4380 --- [project1] [http-nio-8082-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/razorpay/checkout
+2026-09-17T15:47:26.046+05:30 TRACE 4380 --- [project1] [http-nio-8082-exec-3] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-09-17T15:47:27.450+05:30 DEBUG 4380 --- [project1] [http-nio-8082-exec-3] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=lokesh@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_ADMIN]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_ADMIN]]] to HttpSession [org.apache.catalina.session.StandardSessionFacade@1e01e422]
+2026-09-17T15:47:27.452+05:30 DEBUG 4380 --- [project1] [http-nio-8082-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/razorpay/checkout

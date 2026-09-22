@@ -5,6 +5,7 @@ import com.example.project1.DTOs.PayResponseDTO;
 import com.razorpay.Order;
 import com.razorpay.RazorpayException;
 import com.razorpay.Utils;
+import lombok.extern.slf4j.Slf4j;
 import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -12,6 +13,7 @@ import com.razorpay.RazorpayClient;
 import org.json.JSONObject;
 
 @Service
+@Slf4j
 public class RazorPayService {
 
     @Value("${RAZORPAY_KEY}")
@@ -47,6 +49,7 @@ public class RazorPayService {
     public void webHookSigVerification(String signature, String payLoad) throws RazorpayException {
         if(!Utils.verifyWebhookSignature(payLoad,signature,secret))
         {
+            log.warn("unknown entity is breaching security by mimicking razorpay!");
             throw new SecurityException("Unknown Entity is sending this webhook. UNAUTHORIZED!");
         }
     }

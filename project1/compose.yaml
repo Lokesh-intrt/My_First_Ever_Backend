@@ -1,10 +1,49 @@
+version: '3.8'
+
 services:
-  mysql:
-    image: 'mysql:latest'
-    environment:
-      - 'MYSQL_DATABASE=project1'
-      - 'MYSQL_PASSWORD=Lokesh@123'
-      - 'MYSQL_ROOT_PASSWORD=Lokesh@123'
-      - 'MYSQL_USER=project1_user'
+  # -----------------------------------------------------------------------
+  # Service A: The Isolated MySQL Database Container
+  # -----------------------------------------------------------------------
+  project1-mysql:
+    image: mysql:8.0
+    container_name: SBP-mysql-container
     ports:
-      - '3306:3306'
+      - "3307:3306" # Maps container port to local machine port
+    environment:
+      MYSQL_ROOT_PASSWORD: Lokesh@123
+      MYSQL_DATABASE: project1
+    volumes:
+      - mysql_persistent_data:/var/lib/mysql # Preserves database data across container restarts
+    healthcheck:
+      # Ensures the database is fully functional before letting the backend connect
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-pLokesh@123"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # -----------------------------------------------------------------------
+  # Service B: Your Custom Java Spring Boot Backend Engine
+  # -----------------------------------------------------------------------
+  spring-backend-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: SBP-backend-container
+    ports:
+      - "8082:8082"
+    depends_on:
+      project1-mysql:
+        condition: service_healthy # Postpones boot until MySQL health check passes
+    environment:
+      # Containers must use the Compose service name, not localhost.
+      SPRING_DATASOURCE_URL: jdbc:mysql://project1-mysql:3306/project1
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: ${DATABASE_PASSWORD}
+      JWT_SECRET: ${JWT_SECRET}
+      RAZORPAY_KEY: ${RAZORPAY_KEY}
+      RAZORPAY_SECRET: ${RAZORPAY_SECRET}
+      CLIENT_ID: ${CLIENT_ID}
+      CLIENT_SECRET: ${CLIENT_SECRET}
+
+volumes:
+  mysql_persistent_data: # Declares the named volume wrapper
