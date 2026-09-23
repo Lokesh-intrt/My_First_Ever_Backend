@@ -66,6 +66,7 @@ CREATE TABLE revinfo (
 
 CREATE TABLE revchanges (
                             rev BIGINT NOT NULL,
-                            entityname VARCHAR(255) NULL,
+                            entityname VARCHAR(255) NOT NULL,
+                            PRIMARY KEY (rev, entityname),
                             CONSTRAINT fk_revchanges_on_default_tracking_modified_entities_changelog FOREIGN KEY (rev) REFERENCES revinfo (rev)
 );

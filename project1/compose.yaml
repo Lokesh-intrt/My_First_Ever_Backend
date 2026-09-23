@@ -10,7 +10,7 @@ services:
     ports:
       - "3307:3306" # Maps container port to local machine port
     environment:
-      MYSQL_ROOT_PASSWORD: Lokesh@123
+      MYSQL_ROOT_PASSWORD: ${DATABASE_PASSWORD}
       MYSQL_DATABASE: project1
     volumes:
       - mysql_persistent_data:/var/lib/mysql # Preserves database data across container restarts

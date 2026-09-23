@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: project1
+    runtime: docker
+    rootDir: project1
+    dockerfilePath: ./Dockerfile

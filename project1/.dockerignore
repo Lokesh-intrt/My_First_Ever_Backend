@@ -1,0 +1,6 @@
+.git
+.idea
+.env
+target
+*.log
+structural_code.txt
