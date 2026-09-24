@@ -27,7 +27,7 @@ public class PaymentController {
     }
 
     @PostMapping("webhook")
-    ResponseEntity<Void> paymentAftermath(@RequestHeader("X-RazorPay-Signature") String signature, @RequestBody String rawJSONPayLoad) throws RazorpayException, JSONException {
+    ResponseEntity<Void> paymentAftermath(@RequestHeader("X-Razorpay-Signature") String signature, @RequestBody String rawJSONPayLoad) throws RazorpayException, JSONException {
         razorPayService.webHookSigVerification(signature, rawJSONPayLoad);
 
         razorPayService.paymentAfterMath(signature, rawJSONPayLoad);

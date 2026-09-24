@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -7,45 +6,61 @@
 </head>
 <body>
   <button onclick="pay()">Pay ₹40</button>
+  <pre id="status"></pre>
 
   <script>
-    async function pay() {
-      const response = await fetch("/api/razorpay/checkout", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJsb2tlc2hAZ21haWwuY29tIiwiaWF0IjoxNzg5NjM5NzA0LCJleHAiOjE3ODk2NDA2MDR9.1dIO52qKdHg6FJ1xGSnWZnQ1-j6vH5vsiVEyZ9dlc5k"
-        },
-        body: JSON.stringify({
-          orderId: 2,
-          amount: 40,
-          currencyType: "INR"
-        })
-      });
+    const status = document.getElementById("status");
 
-      if (!response.ok) {
-        throw new Error(await response.text());
+    function showStatus(message) {
+      status.textContent = message;
+    }
+
+    async function pay() {
+      const token = window.prompt("Paste a valid JWT token:");
+      if (!token) {
+        showStatus("A JWT token is required to create the Razorpay order.");
+        return;
       }
 
-      const data = await response.json();
+      try {
+        const response = await fetch("/api/razorpay/checkout", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer " + token.trim()
+          },
+          body: JSON.stringify({
+            orderId: 1,
+            amount: 40,
+            currencyType: "INR"
+          })
+        });
 
-      const options = {
-        key: data.keyId,
-        amount: data.amount,
-        currency: data.currencyType,
-        order_id: data.orderId,
-        name: "Test Store",
-        description: "Test payment",
-        handler: function (paymentResponse) {
-          console.log("Payment successful:", paymentResponse);
-          alert("Payment successful");
+        const responseBody = await response.text();
+        if (!response.ok) {
+          throw new Error(`Order creation failed (${response.status}): ${responseBody}`);
         }
-      };
 
-      new Razorpay(options).open();
+        const data = JSON.parse(responseBody);
+        const options = {
+          key: data.keyId,
+          amount: data.amount,
+          currency: data.currencyType,
+          order_id: data.orderId,
+          name: "Test Store",
+          description: "Test payment",
+          handler: function (paymentResponse) {
+            console.log("Payment successful:", paymentResponse);
+            showStatus("Payment completed. Waiting for the Razorpay webhook...");
+          }
+        };
+
+        new Razorpay(options).open();
+      } catch (error) {
+        console.error(error);
+        showStatus(error.message);
+      }
     }
   </script>
 </body>
 </html>
-
-
