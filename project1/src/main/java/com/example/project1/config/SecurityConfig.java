@@ -50,6 +50,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                                 .requestMatchers(
                                         "/testRazorpay.html",
+                                        "/api/razorpay/webhook",
                                         "/oauth2/**",
                                 "/auth/**",
                                 "/login/**",

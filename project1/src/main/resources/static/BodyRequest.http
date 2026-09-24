@@ -1,19 +1,11 @@
-POST http://localhost:8082/cart/create
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJsb2tlc2hAZ21haWwuY29tIiwiaWF0IjoxNzg5NTY1NTgyLCJleHAiOjE3ODk1NjY0ODJ9.7uElkWdjfq3_6JA4WGu3P6lweAc7BxgZWWTgYAZb2b8
+GET http://localhost:8082/product/get/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJsb2tlc2hAZ21haWwuY29tIiwiaWF0IjoxNzkwMjM4OTg0LCJleHAiOjE3OTAyMzk4ODR9.F_PRxvSgFMCSPZLPuywiQFpa79zgghefxSXus3ocED8
 Content-Type: application/json
 
 {
-  "cartItemRequestDTOS": [
-    {
-      "productId": 2,
-      "quantity": 1
-    },
-    {
-      "productId": 1,
-      "quantity": 5
-    }
-
-  ]
+  "name": "shawarma",
+  "stock": 10,
+  "price": 100
 }
 
 

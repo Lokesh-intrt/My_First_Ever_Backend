@@ -13,6 +13,10 @@ import com.example.project1.exceptions.ResourceNotFoundException;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.LockModeType;
 import jakarta.transaction.Transactional;
+import org.springframework.cache.annotation.Caching;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -94,8 +98,20 @@ public class ProductService {
         return productRepository.findAll(pageable);
     }
 
+    @PreAuthorize("isAuthenticated()")
+    @Cacheable(value = "productById", key = "#id")
+    public Product viewProductById(Long id)
+    {
+        return productRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("product", id));
+    }
+
     @Transactional
     @PreAuthorize("hasRole('SELLER')")
+    @Caching(
+            put = @CachePut(value = "product", key = "#email"),
+            evict = @CacheEvict(value = "productById", key = "#id")
+    )
     public Product updateProduct(String email,Long id, ProductUpdateDTO requestDTO)
     {
         Product product = productRepository.findByProductIdAndSeller_Email(id,email).orElseThrow(()-> new ResourceNotFoundException("product"));
@@ -107,6 +123,10 @@ public class ProductService {
 
     @Transactional
     @PreAuthorize("hasRole('SELLER')")
+    @Caching(evict = {
+            @CacheEvict(value = "product", key = "#email"),
+            @CacheEvict(value = "productById", key = "#id")
+    })
     public void deleteProduct(String email,Long id)
     {
         Product product = productRepository.findByProductIdAndSeller_Email(id,email).orElseThrow(()-> new ResourceNotFoundException("product"));

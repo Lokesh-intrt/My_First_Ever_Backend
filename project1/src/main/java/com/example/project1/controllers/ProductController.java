@@ -52,6 +52,12 @@ public class ProductController {
         return ResponseEntity.ok(productService.viewAllProducts(page, size, sortBy, direction));
     }
 
+    @GetMapping("/get/{id}")
+    public ResponseEntity<Product> viewProductById(@PathVariable Long id)
+    {
+        return ResponseEntity.ok(productService.viewProductById(id));
+    }
+
     @GetMapping("/get/bySeller")
     public ResponseEntity<Page<Product>> viewProductsBySeller(Principal principal,
                                                               @RequestParam @Min(0) int page,
