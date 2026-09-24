@@ -1,11 +1,10 @@
-GET http://localhost:8082/product/get/1
+POST https://my-first-ever-backend.onrender.com/auth/login
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJsb2tlc2hAZ21haWwuY29tIiwiaWF0IjoxNzkwMjM4OTg0LCJleHAiOjE3OTAyMzk4ODR9.F_PRxvSgFMCSPZLPuywiQFpa79zgghefxSXus3ocED8
 Content-Type: application/json
 
 {
-  "name": "shawarma",
-  "stock": 10,
-  "price": 100
+  "email": "lokeshreddypamuluru@gmail.com",
+  "password": "LokeshReddy@123"
 }
 
 

@@ -1,7 +1,9 @@
-POST http://localhost:8082/auth/login
+GET https://my-first-ever-backend.onrender.com/product/get/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJsb2tlc2hyZWRkeXBhbXVsdXJ1QGdtYWlsLmNvbSIsImlhdCI6MTc5MDI0NjMxOCwiZXhwIjoxNzkwMjQ3MjE4fQ.om8O8GcHufY45CRgjFwbT7utt6dBX45K0U6PKQH9XYU
 Content-Type: application/json
 
 {
-  "email": "lokesh@gmail.com",
-  "password": "Lokesh@123"
+  "orderId": 2,
+  "amount": 40,
+  "currencyType": "INR"
 }
