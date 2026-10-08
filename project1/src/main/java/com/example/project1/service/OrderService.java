@@ -12,6 +12,10 @@ import com.example.project1.repositories.OrderRepository;
 import com.example.project1.repositories.UserRepository;
 import jakarta.persistence.LockModeType;
 import jakarta.transaction.Transactional;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.Lock;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
@@ -94,5 +98,14 @@ public class OrderService {
 
         order.setQuantity(totalQuantity);
         order.setTotalAmount(totalCost);
+    }
+
+    public Page<Order> viewAllOrders(Integer page, Integer size, String sortBy, String direction)
+    {
+
+        Sort sort = Sort.by(direction,sortBy);
+        Pageable pageable = PageRequest.of(page, size, sort);
+
+        return orderRepository.findAll(pageable);
     }
 }

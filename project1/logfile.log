@@ -1,23 +1,32 @@
-2026-09-24T14:05:49.388+05:30  INFO 16900 --- [project1] [main] c.example.project1.Project1Application   : Starting Project1Application using Java 24.0.2 with PID 16900 (C:\SBP\project1\target\classes started by lokes in C:\SBP\project1)
-2026-09-24T14:05:49.394+05:30  INFO 16900 --- [project1] [main] c.example.project1.Project1Application   : No active profile set, falling back to 1 default profile: "default"
-2026-09-24T14:05:50.195+05:30  INFO 16900 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2026-09-24T14:05:50.197+05:30  INFO 16900 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-09-24T14:05:50.264+05:30  INFO 16900 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 6 JPA repository interfaces.
-2026-09-24T14:05:50.811+05:30  INFO 16900 --- [project1] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8082 (http)
-2026-09-24T14:05:50.826+05:30  INFO 16900 --- [project1] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-09-24T14:05:50.827+05:30  INFO 16900 --- [project1] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
-2026-09-24T14:05:50.888+05:30  INFO 16900 --- [project1] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1426 ms
-2026-09-24T14:05:51.074+05:30  INFO 16900 --- [project1] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-09-24T14:05:51.426+05:30  INFO 16900 --- [project1] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27261190
-2026-09-24T14:05:51.428+05:30  INFO 16900 --- [project1] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-09-24T14:05:51.464+05:30  INFO 16900 --- [project1] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/project1 (MySQL 8.0)
-2026-09-24T14:05:51.580+05:30  INFO 16900 --- [project1] [main] o.f.core.internal.command.DbValidate     : Successfully validated 6 migrations (execution time 00:00.052s)
-2026-09-24T14:05:51.600+05:30  INFO 16900 --- [project1] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `project1`: 6
-2026-09-24T14:05:51.608+05:30  INFO 16900 --- [project1] [main] o.f.core.internal.command.DbMigrate      : Schema `project1` is up to date. No migration necessary.
-2026-09-24T14:05:51.712+05:30  INFO 16900 --- [project1] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-09-24T14:05:51.787+05:30  INFO 16900 --- [project1] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
-2026-09-24T14:05:52.154+05:30  INFO 16900 --- [project1] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-09-24T14:05:52.241+05:30  INFO 16900 --- [project1] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2026-10-06T10:30:07.143+05:30  INFO 13508 --- [project1] [main] c.example.project1.Project1Application   : Starting Project1Application using Java 24.0.2 with PID 13508 (C:\SBP\project1\target\classes started by lokes in C:\SBP\project1)
+2026-10-06T10:30:07.149+05:30  INFO 13508 --- [project1] [main] c.example.project1.Project1Application   : No active profile set, falling back to 1 default profile: "default"
+2026-10-06T10:30:08.028+05:30  INFO 13508 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-10-06T10:30:08.029+05:30  INFO 13508 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06T10:30:08.191+05:30  INFO 13508 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 153 ms. Found 6 JPA repository interfaces.
+2026-10-06T10:30:08.213+05:30  INFO 13508 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-10-06T10:30:08.215+05:30  INFO 13508 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-10-06T10:30:08.231+05:30  INFO 13508 --- [project1] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.project1.repositories.CartItemRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-06T10:30:08.232+05:30  INFO 13508 --- [project1] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.project1.repositories.CartRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-06T10:30:08.233+05:30  INFO 13508 --- [project1] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.project1.repositories.OrderItemRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-06T10:30:08.236+05:30  INFO 13508 --- [project1] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.project1.repositories.OrderRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-06T10:30:08.237+05:30  INFO 13508 --- [project1] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.project1.repositories.ProductRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-06T10:30:08.237+05:30  INFO 13508 --- [project1] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.project1.repositories.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-06T10:30:08.238+05:30  INFO 13508 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2026-10-06T10:30:08.775+05:30  INFO 13508 --- [project1] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8082 (http)
+2026-10-06T10:30:08.788+05:30  INFO 13508 --- [project1] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-06T10:30:08.789+05:30  INFO 13508 --- [project1] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-06T10:30:08.846+05:30  INFO 13508 --- [project1] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1634 ms
+2026-10-06T10:30:09.334+05:30  INFO 13508 --- [project1] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-06T10:30:09.669+05:30  INFO 13508 --- [project1] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@50ac1249
+2026-10-06T10:30:09.670+05:30  INFO 13508 --- [project1] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-06T10:30:09.697+05:30  INFO 13508 --- [project1] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/project1 (MySQL 8.0)
+2026-10-06T10:30:09.773+05:30  INFO 13508 --- [project1] [main] o.f.core.internal.command.DbValidate     : Successfully validated 6 migrations (execution time 00:00.025s)
+2026-10-06T10:30:09.789+05:30  INFO 13508 --- [project1] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `project1`: 6
+2026-10-06T10:30:09.793+05:30  INFO 13508 --- [project1] [main] o.f.core.internal.command.DbMigrate      : Schema `project1` is up to date. No migration necessary.
+2026-10-06T10:30:09.894+05:30  INFO 13508 --- [project1] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-06T10:30:09.953+05:30  INFO 13508 --- [project1] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-06T10:30:10.335+05:30  INFO 13508 --- [project1] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06T10:30:10.422+05:30  INFO 13508 --- [project1] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [jdbc:mysql://localhost:3306/project1]
 	Database driver: MySQL Connector/J
 	Database dialect: MySQLDialect
@@ -29,35 +38,288 @@
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-09-24T14:05:53.065+05:30  INFO 16900 --- [project1] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-09-24T14:05:53.129+05:30  INFO 16900 --- [project1] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-09-24T14:05:53.197+05:30  INFO 16900 --- [project1] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-09-24T14:05:53.431+05:30  INFO 16900 --- [project1] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetails
-2026-09-24T14:05:53.782+05:30  WARN 16900 --- [project1] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-09-24T14:05:54.039+05:30 DEBUG 16900 --- [project1] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, OAuth2AuthorizationRequestRedirectFilter, OAuth2LoginAuthenticationFilter, JwtFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
-2026-09-24T14:05:54.434+05:30  INFO 16900 --- [project1] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8082 (http) with context path '/'
-2026-09-24T14:05:54.440+05:30  INFO 16900 --- [project1] [main] c.example.project1.Project1Application   : Started Project1Application in 5.455 seconds (process running for 5.857)
-2026-09-24T14:05:54.442+05:30  WARN 16900 --- [project1] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
-2026-09-24T14:05:54.443+05:30  WARN 16900 --- [project1] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
-2026-09-24T14:06:24.023+05:30  INFO 16900 --- [project1] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-09-24T14:06:24.024+05:30  INFO 16900 --- [project1] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-09-24T14:06:24.026+05:30  INFO 16900 --- [project1] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2026-09-24T14:06:24.041+05:30 DEBUG 16900 --- [project1] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
-2026-09-24T14:06:24.050+05:30 TRACE 16900 --- [project1] [http-nio-8082-exec-1] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
-2026-09-24T14:06:24.053+05:30 DEBUG 16900 --- [project1] [http-nio-8082-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-09-24T14:06:24.054+05:30 DEBUG 16900 --- [project1] [http-nio-8082-exec-1] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id C9D497F50723E4693967A720C2A4C240
-2026-09-24T14:06:24.056+05:30 DEBUG 16900 --- [project1] [http-nio-8082-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
-2026-09-24T14:06:24.662+05:30 DEBUG 16900 --- [project1] [http-nio-8082-exec-1] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
-2026-09-24T14:06:24.681+05:30  INFO 16900 --- [project1] [http-nio-8082-exec-1] c.example.project1.service.UserService   : User:lokesh@gmail.com successfully logged in
-2026-09-24T14:07:01.473+05:30 DEBUG 16900 --- [project1] [http-nio-8082-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /product/get/1
-2026-09-24T14:07:01.474+05:30 TRACE 16900 --- [project1] [http-nio-8082-exec-9] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
-2026-09-24T14:07:01.590+05:30 DEBUG 16900 --- [project1] [http-nio-8082-exec-9] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=lokesh@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_SELLER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_SELLER]]] to HttpSession [org.apache.catalina.session.StandardSessionFacade@49ff5c8e]
-2026-09-24T14:07:01.591+05:30 DEBUG 16900 --- [project1] [http-nio-8082-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /product/get/1
-2026-09-24T14:07:01.594+05:30 DEBUG 16900 --- [project1] [http-nio-8082-exec-9] horizationManagerBeforeMethodInterceptor : Authorizing method invocation ReflectiveMethodInvocation: public com.example.project1.model.Product com.example.project1.service.ProductService.viewProductById(java.lang.Long); target is of class [com.example.project1.service.ProductService]
-2026-09-24T14:07:01.602+05:30 DEBUG 16900 --- [project1] [http-nio-8082-exec-9] horizationManagerBeforeMethodInterceptor : Authorized method invocation ReflectiveMethodInvocation: public com.example.project1.model.Product com.example.project1.service.ProductService.viewProductById(java.lang.Long); target is of class [com.example.project1.service.ProductService]
-2026-09-24T14:07:08.944+05:30 DEBUG 16900 --- [project1] [http-nio-8082-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /product/get/1
-2026-09-24T14:07:08.945+05:30 TRACE 16900 --- [project1] [http-nio-8082-exec-2] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
-2026-09-24T14:07:08.951+05:30 DEBUG 16900 --- [project1] [http-nio-8082-exec-2] w.c.HttpSessionSecurityContextRepository : Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=lokesh@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_SELLER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_SELLER]]]
-2026-09-24T14:07:08.952+05:30 DEBUG 16900 --- [project1] [http-nio-8082-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /product/get/1
-2026-09-24T14:07:08.953+05:30 DEBUG 16900 --- [project1] [http-nio-8082-exec-2] horizationManagerBeforeMethodInterceptor : Authorizing method invocation ReflectiveMethodInvocation: public com.example.project1.model.Product com.example.project1.service.ProductService.viewProductById(java.lang.Long); target is of class [com.example.project1.service.ProductService]
-2026-09-24T14:07:08.953+05:30 DEBUG 16900 --- [project1] [http-nio-8082-exec-2] horizationManagerBeforeMethodInterceptor : Authorized method invocation ReflectiveMethodInvocation: public com.example.project1.model.Product com.example.project1.service.ProductService.viewProductById(java.lang.Long); target is of class [com.example.project1.service.ProductService]
+2026-10-06T10:30:11.251+05:30  INFO 13508 --- [project1] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06T10:30:11.289+05:30  INFO 13508 --- [project1] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06T10:30:11.359+05:30  INFO 13508 --- [project1] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-06T10:30:11.591+05:30  INFO 13508 --- [project1] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetails
+2026-10-06T10:30:11.960+05:30  WARN 13508 --- [project1] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-06T10:30:12.201+05:30 DEBUG 13508 --- [project1] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, OAuth2AuthorizationRequestRedirectFilter, OAuth2LoginAuthenticationFilter, JwtFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-10-06T10:30:12.753+05:30  INFO 13508 --- [project1] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8082 (http) with context path '/'
+2026-10-06T10:30:12.761+05:30  INFO 13508 --- [project1] [main] c.example.project1.Project1Application   : Started Project1Application in 6.02 seconds (process running for 6.394)
+2026-10-06T10:30:12.763+05:30  WARN 13508 --- [project1] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-06T10:30:12.764+05:30  WARN 13508 --- [project1] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-06T10:30:43.565+05:30  INFO 13508 --- [project1] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-06T10:30:43.570+05:30  INFO 13508 --- [project1] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-06T10:30:43.584+05:30  INFO 13508 --- [project1] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06T10:30:43.586+05:30  INFO 13508 --- [project1] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-06T10:30:43.594+05:30  INFO 13508 --- [project1] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-10-06T12:42:54.029+05:30  INFO 19224 --- [project1] [main] c.example.project1.Project1Application   : Starting Project1Application using Java 24.0.2 with PID 19224 (C:\SBP\project1\target\classes started by lokes in C:\SBP\project1)
+2026-10-06T12:42:54.032+05:30  INFO 19224 --- [project1] [main] c.example.project1.Project1Application   : No active profile set, falling back to 1 default profile: "default"
+2026-10-06T12:42:55.028+05:30  INFO 19224 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-10-06T12:42:55.030+05:30  INFO 19224 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06T12:42:55.201+05:30  INFO 19224 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 161 ms. Found 6 JPA repository interfaces.
+2026-10-06T12:42:55.230+05:30  INFO 19224 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-10-06T12:42:55.231+05:30  INFO 19224 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-10-06T12:42:55.251+05:30  INFO 19224 --- [project1] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.project1.repositories.CartItemRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-06T12:42:55.253+05:30  INFO 19224 --- [project1] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.project1.repositories.CartRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-06T12:42:55.254+05:30  INFO 19224 --- [project1] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.project1.repositories.OrderItemRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-06T12:42:55.255+05:30  INFO 19224 --- [project1] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.project1.repositories.OrderRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-06T12:42:55.257+05:30  INFO 19224 --- [project1] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.project1.repositories.ProductRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-06T12:42:55.258+05:30  INFO 19224 --- [project1] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.project1.repositories.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-06T12:42:55.258+05:30  INFO 19224 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 Redis repository interfaces.
+2026-10-06T12:42:55.939+05:30  INFO 19224 --- [project1] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8082 (http)
+2026-10-06T12:42:55.957+05:30  INFO 19224 --- [project1] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-06T12:42:55.958+05:30  INFO 19224 --- [project1] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-06T12:42:56.035+05:30  INFO 19224 --- [project1] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1934 ms
+2026-10-06T12:42:56.640+05:30  INFO 19224 --- [project1] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-06T12:42:57.078+05:30  INFO 19224 --- [project1] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@729d6ee2
+2026-10-06T12:42:57.080+05:30  INFO 19224 --- [project1] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-06T12:42:57.145+05:30  INFO 19224 --- [project1] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/project1 (MySQL 8.0)
+2026-10-06T12:42:57.250+05:30  INFO 19224 --- [project1] [main] o.f.core.internal.command.DbValidate     : Successfully validated 6 migrations (execution time 00:00.030s)
+2026-10-06T12:42:57.267+05:30  INFO 19224 --- [project1] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `project1`: 6
+2026-10-06T12:42:57.272+05:30  INFO 19224 --- [project1] [main] o.f.core.internal.command.DbMigrate      : Schema `project1` is up to date. No migration necessary.
+2026-10-06T12:42:57.370+05:30  INFO 19224 --- [project1] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-06T12:42:57.619+05:30  INFO 19224 --- [project1] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-06T12:42:58.112+05:30  INFO 19224 --- [project1] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06T12:42:58.209+05:30  INFO 19224 --- [project1] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/project1]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: project1/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-06T12:42:59.222+05:30  INFO 19224 --- [project1] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06T12:42:59.266+05:30  INFO 19224 --- [project1] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06T12:42:59.341+05:30  INFO 19224 --- [project1] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-06T12:42:59.639+05:30  INFO 19224 --- [project1] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetails
+2026-10-06T12:43:00.079+05:30  WARN 19224 --- [project1] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-06T12:43:00.397+05:30 DEBUG 19224 --- [project1] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, OAuth2AuthorizationRequestRedirectFilter, OAuth2LoginAuthenticationFilter, JwtFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-10-06T12:43:01.081+05:30  WARN 19224 --- [project1] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-10-06T12:43:01.085+05:30  INFO 19224 --- [project1] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06T12:43:01.088+05:30  INFO 19224 --- [project1] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-06T12:43:01.099+05:30  INFO 19224 --- [project1] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-10-06T12:43:01.129+05:30  INFO 19224 --- [project1] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-10-06T12:43:01.145+05:30 ERROR 19224 --- [project1] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8082 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8082 or configure this application to listen on another port.
+
+2026-10-06T14:04:59.149+05:30  INFO 9264 --- [project1] [main] c.example.project1.Project1Application   : Starting Project1Application using Java 24.0.2 with PID 9264 (C:\SBP\project1\target\classes started by lokes in C:\SBP\project1)
+2026-10-06T14:04:59.153+05:30  INFO 9264 --- [project1] [main] c.example.project1.Project1Application   : No active profile set, falling back to 1 default profile: "default"
+2026-10-06T14:05:00.190+05:30  INFO 9264 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-10-06T14:05:00.193+05:30  INFO 9264 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06T14:05:00.380+05:30  INFO 9264 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 178 ms. Found 6 JPA repository interfaces.
+2026-10-06T14:05:00.412+05:30  INFO 9264 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-10-06T14:05:00.413+05:30  INFO 9264 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-10-06T14:05:00.445+05:30  INFO 9264 --- [project1] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.project1.repositories.CartItemRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-06T14:05:00.446+05:30  INFO 9264 --- [project1] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.project1.repositories.CartRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-06T14:05:00.448+05:30  INFO 9264 --- [project1] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.project1.repositories.OrderItemRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-06T14:05:00.450+05:30  INFO 9264 --- [project1] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.project1.repositories.OrderRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-06T14:05:00.450+05:30  INFO 9264 --- [project1] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.project1.repositories.ProductRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-06T14:05:00.451+05:30  INFO 9264 --- [project1] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.project1.repositories.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-06T14:05:00.451+05:30  INFO 9264 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2026-10-06T14:05:01.100+05:30  INFO 9264 --- [project1] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8082 (http)
+2026-10-06T14:05:01.118+05:30  INFO 9264 --- [project1] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-06T14:05:01.118+05:30  INFO 9264 --- [project1] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-06T14:05:01.207+05:30  INFO 9264 --- [project1] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1981 ms
+2026-10-06T14:05:01.795+05:30  INFO 9264 --- [project1] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-06T14:05:02.203+05:30  INFO 9264 --- [project1] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@729d6ee2
+2026-10-06T14:05:02.205+05:30  INFO 9264 --- [project1] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-06T14:05:02.243+05:30  INFO 9264 --- [project1] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/project1 (MySQL 8.0)
+2026-10-06T14:05:02.332+05:30  INFO 9264 --- [project1] [main] o.f.core.internal.command.DbValidate     : Successfully validated 6 migrations (execution time 00:00.034s)
+2026-10-06T14:05:02.355+05:30  INFO 9264 --- [project1] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `project1`: 6
+2026-10-06T14:05:02.361+05:30  INFO 9264 --- [project1] [main] o.f.core.internal.command.DbMigrate      : Schema `project1` is up to date. No migration necessary.
+2026-10-06T14:05:02.502+05:30  INFO 9264 --- [project1] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-06T14:05:02.578+05:30  INFO 9264 --- [project1] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-06T14:05:03.043+05:30  INFO 9264 --- [project1] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06T14:05:03.152+05:30  INFO 9264 --- [project1] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/project1]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: project1/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-06T14:05:04.125+05:30  INFO 9264 --- [project1] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06T14:05:04.181+05:30  INFO 9264 --- [project1] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06T14:05:04.253+05:30  INFO 9264 --- [project1] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-06T14:05:04.532+05:30  INFO 9264 --- [project1] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetails
+2026-10-06T14:05:05.010+05:30  WARN 9264 --- [project1] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-06T14:05:05.294+05:30 DEBUG 9264 --- [project1] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, OAuth2AuthorizationRequestRedirectFilter, OAuth2LoginAuthenticationFilter, JwtFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-10-06T14:05:06.052+05:30  WARN 9264 --- [project1] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-10-06T14:05:06.057+05:30  INFO 9264 --- [project1] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06T14:05:06.063+05:30  INFO 9264 --- [project1] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-06T14:05:06.075+05:30  INFO 9264 --- [project1] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-10-06T14:05:06.107+05:30  INFO 9264 --- [project1] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-10-06T14:05:06.118+05:30 ERROR 9264 --- [project1] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8082 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8082 or configure this application to listen on another port.
+
+2026-10-06T14:05:49.405+05:30  INFO 17496 --- [project1] [main] c.example.project1.Project1Application   : Starting Project1Application using Java 24.0.2 with PID 17496 (C:\SBP\project1\target\classes started by lokes in C:\SBP\project1)
+2026-10-06T14:05:49.408+05:30  INFO 17496 --- [project1] [main] c.example.project1.Project1Application   : No active profile set, falling back to 1 default profile: "default"
+2026-10-06T14:05:50.301+05:30  INFO 17496 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-10-06T14:05:50.303+05:30  INFO 17496 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06T14:05:50.428+05:30  INFO 17496 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 118 ms. Found 6 JPA repository interfaces.
+2026-10-06T14:05:50.451+05:30  INFO 17496 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-10-06T14:05:50.452+05:30  INFO 17496 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-10-06T14:05:50.473+05:30  INFO 17496 --- [project1] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.project1.repositories.CartItemRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-06T14:05:50.474+05:30  INFO 17496 --- [project1] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.project1.repositories.CartRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-06T14:05:50.476+05:30  INFO 17496 --- [project1] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.project1.repositories.OrderItemRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-06T14:05:50.479+05:30  INFO 17496 --- [project1] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.project1.repositories.OrderRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-06T14:05:50.481+05:30  INFO 17496 --- [project1] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.project1.repositories.ProductRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-06T14:05:50.482+05:30  INFO 17496 --- [project1] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.project1.repositories.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-06T14:05:50.484+05:30  INFO 17496 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 0 Redis repository interfaces.
+2026-10-06T14:05:51.038+05:30  INFO 17496 --- [project1] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8083 (http)
+2026-10-06T14:05:51.061+05:30  INFO 17496 --- [project1] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-06T14:05:51.062+05:30  INFO 17496 --- [project1] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-06T14:05:51.126+05:30  INFO 17496 --- [project1] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1653 ms
+2026-10-06T14:05:51.551+05:30  INFO 17496 --- [project1] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-06T14:05:51.873+05:30  INFO 17496 --- [project1] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@729d6ee2
+2026-10-06T14:05:51.874+05:30  INFO 17496 --- [project1] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-06T14:05:51.905+05:30  INFO 17496 --- [project1] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/project1 (MySQL 8.0)
+2026-10-06T14:05:51.990+05:30  INFO 17496 --- [project1] [main] o.f.core.internal.command.DbValidate     : Successfully validated 6 migrations (execution time 00:00.031s)
+2026-10-06T14:05:52.012+05:30  INFO 17496 --- [project1] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `project1`: 6
+2026-10-06T14:05:52.016+05:30  INFO 17496 --- [project1] [main] o.f.core.internal.command.DbMigrate      : Schema `project1` is up to date. No migration necessary.
+2026-10-06T14:05:52.111+05:30  INFO 17496 --- [project1] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-06T14:05:52.170+05:30  INFO 17496 --- [project1] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-06T14:05:52.541+05:30  INFO 17496 --- [project1] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06T14:05:52.621+05:30  INFO 17496 --- [project1] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/project1]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: project1/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-06T14:05:53.503+05:30  INFO 17496 --- [project1] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06T14:05:53.566+05:30  INFO 17496 --- [project1] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06T14:05:53.635+05:30  INFO 17496 --- [project1] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-06T14:05:53.901+05:30  INFO 17496 --- [project1] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetails
+2026-10-06T14:05:54.384+05:30  WARN 17496 --- [project1] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-06T14:05:54.627+05:30 DEBUG 17496 --- [project1] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, OAuth2AuthorizationRequestRedirectFilter, OAuth2LoginAuthenticationFilter, JwtFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-10-06T14:05:55.241+05:30  INFO 17496 --- [project1] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8083 (http) with context path '/'
+2026-10-06T14:05:55.256+05:30  INFO 17496 --- [project1] [main] c.example.project1.Project1Application   : Started Project1Application in 6.286 seconds (process running for 6.715)
+2026-10-06T14:05:55.259+05:30  WARN 17496 --- [project1] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-06T14:05:55.259+05:30  WARN 17496 --- [project1] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-06T14:07:02.103+05:30  INFO 17496 --- [project1] [http-nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-06T14:07:02.104+05:30  INFO 17496 --- [project1] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-06T14:07:02.106+05:30  INFO 17496 --- [project1] [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-10-06T14:07:02.113+05:30 DEBUG 17496 --- [project1] [http-nio-8083-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2026-10-06T14:07:02.121+05:30 TRACE 17496 --- [project1] [http-nio-8083-exec-1] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-10-06T14:07:02.122+05:30 DEBUG 17496 --- [project1] [http-nio-8083-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-10-06T14:07:02.123+05:30 DEBUG 17496 --- [project1] [http-nio-8083-exec-1] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id B84B621FD66ECF46B4A9E4E10E3A42F0
+2026-10-06T14:07:02.123+05:30 DEBUG 17496 --- [project1] [http-nio-8083-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2026-10-06T14:07:18.196+05:30 DEBUG 17496 --- [project1] [http-nio-8083-exec-2] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2026-10-06T14:07:18.199+05:30 TRACE 17496 --- [project1] [http-nio-8083-exec-2] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-10-06T14:07:18.200+05:30 DEBUG 17496 --- [project1] [http-nio-8083-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-10-06T14:07:18.201+05:30 DEBUG 17496 --- [project1] [http-nio-8083-exec-2] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id B84B621FD66ECF46B4A9E4E10E3A42F0
+2026-10-06T14:07:18.201+05:30 DEBUG 17496 --- [project1] [http-nio-8083-exec-2] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2026-10-06T14:07:18.921+05:30 DEBUG 17496 --- [project1] [http-nio-8083-exec-2] o.s.s.a.dao.DaoAuthenticationProvider    : Failed to find user 'ravi@gmail.com'
+2026-10-06T14:07:18.923+05:30 DEBUG 17496 --- [project1] [http-nio-8083-exec-2] o.s.s.authentication.ProviderManager     : Authentication failed with provider DaoAuthenticationProvider since Bad credentials
+2026-10-06T14:08:24.653+05:30 DEBUG 17496 --- [project1] [http-nio-8083-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /auth/login
+2026-10-06T14:08:24.655+05:30 TRACE 17496 --- [project1] [http-nio-8083-exec-4] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-10-06T14:08:24.655+05:30 DEBUG 17496 --- [project1] [http-nio-8083-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-10-06T14:08:24.655+05:30 DEBUG 17496 --- [project1] [http-nio-8083-exec-4] o.s.s.w.session.SessionManagementFilter  : Request requested invalid session id B84B621FD66ECF46B4A9E4E10E3A42F0
+2026-10-06T14:08:24.656+05:30 DEBUG 17496 --- [project1] [http-nio-8083-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /auth/login
+2026-10-06T14:08:24.752+05:30 DEBUG 17496 --- [project1] [http-nio-8083-exec-4] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2026-10-06T14:08:24.769+05:30  INFO 17496 --- [project1] [http-nio-8083-exec-4] c.example.project1.service.UserService   : User:lokeshreddypamuluru@gmail.com successfully logged in
+2026-10-06T14:09:01.485+05:30 DEBUG 17496 --- [project1] [http-nio-8083-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /user/get
+2026-10-06T14:09:01.486+05:30 TRACE 17496 --- [project1] [http-nio-8083-exec-5] .s.o.c.w.OAuth2LoginAuthenticationFilter : Did not match request to PathPattern [/login/oauth2/code/*]
+2026-10-06T14:09:01.605+05:30 DEBUG 17496 --- [project1] [http-nio-8083-exec-5] w.c.HttpSessionSecurityContextRepository : Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=lokeshreddypamuluru@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_USER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_USER]]] to HttpSession [org.apache.catalina.session.StandardSessionFacade@4ebb4e73]
+2026-10-06T14:09:01.605+05:30 DEBUG 17496 --- [project1] [http-nio-8083-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /user/get
+2026-10-06T14:30:02.970+05:30  INFO 17496 --- [project1] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-06T14:30:02.979+05:30  INFO 17496 --- [project1] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-06T14:30:03.002+05:30  INFO 17496 --- [project1] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06T14:30:03.008+05:30  INFO 17496 --- [project1] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-06T14:30:03.015+05:30  INFO 17496 --- [project1] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-10-06T15:11:13.645+05:30  INFO 996 --- [project1] [main] c.example.project1.Project1Application   : Starting Project1Application using Java 24.0.2 with PID 996 (C:\SBP\project1\target\classes started by lokes in C:\SBP\project1)
+2026-10-06T15:11:13.648+05:30  INFO 996 --- [project1] [main] c.example.project1.Project1Application   : No active profile set, falling back to 1 default profile: "default"
+2026-10-06T15:11:14.537+05:30  INFO 996 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-10-06T15:11:14.539+05:30  INFO 996 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06T15:11:14.669+05:30  INFO 996 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 123 ms. Found 6 JPA repository interfaces.
+2026-10-06T15:11:14.691+05:30  INFO 996 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-10-06T15:11:14.693+05:30  INFO 996 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-10-06T15:11:14.711+05:30  INFO 996 --- [project1] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.project1.repositories.CartItemRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-06T15:11:14.711+05:30  INFO 996 --- [project1] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.project1.repositories.CartRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-06T15:11:14.712+05:30  INFO 996 --- [project1] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.project1.repositories.OrderItemRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-06T15:11:14.713+05:30  INFO 996 --- [project1] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.project1.repositories.OrderRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-06T15:11:14.714+05:30  INFO 996 --- [project1] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.project1.repositories.ProductRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-06T15:11:14.714+05:30  INFO 996 --- [project1] [main] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.example.project1.repositories.UserRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-10-06T15:11:14.714+05:30  INFO 996 --- [project1] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
+2026-10-06T15:11:15.334+05:30  INFO 996 --- [project1] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8083 (http)
+2026-10-06T15:11:15.357+05:30  INFO 996 --- [project1] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-06T15:11:15.358+05:30  INFO 996 --- [project1] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-06T15:11:15.425+05:30  INFO 996 --- [project1] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1716 ms
+2026-10-06T15:11:15.632+05:30  INFO 996 --- [project1] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-06T15:11:16.001+05:30  INFO 996 --- [project1] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3c7d8a4
+2026-10-06T15:11:16.002+05:30  INFO 996 --- [project1] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-06T15:11:16.042+05:30  INFO 996 --- [project1] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/project1 (MySQL 8.0)
+2026-10-06T15:11:16.151+05:30  INFO 996 --- [project1] [main] o.f.core.internal.command.DbValidate     : Successfully validated 6 migrations (execution time 00:00.044s)
+2026-10-06T15:11:16.184+05:30  INFO 996 --- [project1] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `project1`: 6
+2026-10-06T15:11:16.191+05:30  INFO 996 --- [project1] [main] o.f.core.internal.command.DbMigrate      : Schema `project1` is up to date. No migration necessary.
+2026-10-06T15:11:16.291+05:30  INFO 996 --- [project1] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-06T15:11:16.365+05:30  INFO 996 --- [project1] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-06T15:11:16.792+05:30  INFO 996 --- [project1] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06T15:11:16.883+05:30  INFO 996 --- [project1] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/project1]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.44
+	Default catalog/schema: project1/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-06T15:11:17.825+05:30  INFO 996 --- [project1] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06T15:11:17.871+05:30  INFO 996 --- [project1] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06T15:11:17.939+05:30  INFO 996 --- [project1] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-06T15:11:18.204+05:30  INFO 996 --- [project1] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name customUserDetails
+2026-10-06T15:11:18.902+05:30  WARN 996 --- [project1] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-06T15:11:19.229+05:30 DEBUG 996 --- [project1] [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, CorsFilter, LogoutFilter, OAuth2AuthorizationRequestRedirectFilter, OAuth2LoginAuthenticationFilter, JwtFilter, DefaultResourcesFilter, DefaultLoginPageGeneratingFilter, DefaultLogoutPageGeneratingFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+2026-10-06T15:11:19.821+05:30  INFO 996 --- [project1] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8083 (http) with context path '/'
+2026-10-06T15:11:19.833+05:30  INFO 996 --- [project1] [main] c.example.project1.Project1Application   : Started Project1Application in 6.629 seconds (process running for 7.023)
+2026-10-06T15:11:19.839+05:30  WARN 996 --- [project1] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-10-06T15:11:19.840+05:30  WARN 996 --- [project1] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-10-06T15:11:35.603+05:30  INFO 996 --- [project1] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-06T15:11:35.607+05:30  INFO 996 --- [project1] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-06T15:11:35.621+05:30  INFO 996 --- [project1] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06T15:11:35.623+05:30  INFO 996 --- [project1] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-06T15:11:35.630+05:30  INFO 996 --- [project1] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

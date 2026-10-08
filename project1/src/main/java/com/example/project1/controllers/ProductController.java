@@ -1,6 +1,7 @@
 package com.example.project1.controllers;
 
 import com.example.project1.DTOs.ProductRequestDTO;
+import com.example.project1.DTOs.ProductResponseDTO;
 import com.example.project1.DTOs.ProductUpdateDTO;
 import com.example.project1.model.Product;
 import com.example.project1.service.ProductService;
@@ -44,10 +45,10 @@ public class ProductController {
     }
 
     @GetMapping("/get/all")
-    ResponseEntity<Page<Product>>  viewAllProducts(@RequestParam @Min(0) int page,
-                                                   @RequestParam @Min(0) int size,
-                                                   @RequestParam String sortBy,
-                                                   @RequestParam Sort.Direction direction)
+    ResponseEntity<Page<ProductResponseDTO>>  viewAllProducts(@RequestParam @Min(0) int page,
+                                                              @RequestParam @Min(0) int size,
+                                                              @RequestParam String sortBy,
+                                                              @RequestParam Sort.Direction direction)
     {
         return ResponseEntity.ok(productService.viewAllProducts(page, size, sortBy, direction));
     }

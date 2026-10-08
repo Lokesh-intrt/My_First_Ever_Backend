@@ -10,6 +10,7 @@ import com.example.project1.model.User;
 import com.example.project1.repositories.UserRepository;
 import com.example.project1.exceptions.ResourceNotFoundException;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -53,6 +54,7 @@ public class UserService {
         return token;
     }
 
+    @Cacheable(key = "#email" , value = "user")
     public UserResponseDTO getUserInfo(String email)
     {
         User user = userRepository.findByEmail(email).orElseThrow(()->new ResourceNotFoundException("User"));

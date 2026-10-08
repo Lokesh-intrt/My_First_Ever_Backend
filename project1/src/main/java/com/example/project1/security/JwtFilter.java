@@ -1,5 +1,6 @@
 package com.example.project1.security;
 
+import com.example.project1.service.RedisJwtBlackListing;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -15,6 +16,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
+import java.security.Principal;
+import java.util.Date;
 
 @Component
 public class JwtFilter extends OncePerRequestFilter {
@@ -23,10 +26,12 @@ public class JwtFilter extends OncePerRequestFilter {
 
     private final JwtService jwtService;
     private final UserDetailsService userDetailsService;
+    private final RedisJwtBlackListing redisJwtBlackListing;
 
-    public JwtFilter(JwtService jwtService, UserDetailsService userDetailsService) {
+    public JwtFilter(JwtService jwtService, UserDetailsService userDetailsService, RedisJwtBlackListing redisJwtBlackListing) {
         this.jwtService = jwtService;
         this.userDetailsService = userDetailsService;
+        this.redisJwtBlackListing = redisJwtBlackListing;
     }
 
     @Override
@@ -34,6 +39,7 @@ public class JwtFilter extends OncePerRequestFilter {
         String path = request.getServletPath();
         return path.equals("/")
                 || path.startsWith("/auth/")
+                || path.equals("/api/razorpay/webhook")
                 ||path.startsWith("/login")
                 ||path.startsWith("/oauth2")
                 || path.equals("/testRazorpay.html")
@@ -67,6 +73,14 @@ public class JwtFilter extends OncePerRequestFilter {
         if (token.isEmpty() || !jwtService.isValid(token)) {
             SecurityContextHolder.clearContext();
             writeUnauthorized(servletResponse, "Invalid or expired JWT token");
+            return;
+        }
+
+        String jti = jwtService.getId(token);
+        if(redisJwtBlackListing.checkRedis(jti))
+        {
+            SecurityContextHolder.clearContext();
+            writeUnauthorized(servletResponse,"JWT token has been blacklisted. Please use a valid token.");
             return;
         }
 

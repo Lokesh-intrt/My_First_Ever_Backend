@@ -22,6 +22,9 @@ public class RazorPayService {
     @Value("${RAZORPAY_SECRET}")
     private String secret;
 
+    @Value("${RAZORPAY_WEBHOOK_SECRET:${RAZORPAY_SECRET}}")
+    private String webhookSecret;
+
     private final PaymentUpdateService paymentUpdateService;
 
     public RazorPayService(PaymentUpdateService paymentUpdateService) {
@@ -47,7 +50,8 @@ public class RazorPayService {
     }
 
     public void webHookSigVerification(String signature, String payLoad) throws RazorpayException {
-        if(!Utils.verifyWebhookSignature(payLoad,signature,secret))
+        log.info("Received Razorpay webhook");
+        if(!Utils.verifyWebhookSignature(payLoad, signature, webhookSecret))
         {
             log.warn("unknown entity is breaching security by mimicking razorpay!");
             throw new SecurityException("Unknown Entity is sending this webhook. UNAUTHORIZED!");
@@ -59,6 +63,7 @@ public class RazorPayService {
         JSONObject payLoad = new JSONObject(rawJSONPayLoad);
         //event = payment success or failure
         String event = payLoad.getString("event");
+        log.info("Processing Razorpay webhook event: {}", event);
 
         if(event.equalsIgnoreCase("order.paid"))
         {
@@ -67,7 +72,6 @@ public class RazorPayService {
                     .getJSONObject("entity");
 
             String receipt = order.getString("receipt");
-            String razorpayId = order.getString("id");
             Long orderId = Long.parseLong(receipt.replace("txn_order_",""));
 
             paymentUpdateService.updateOrderStatus(orderId);

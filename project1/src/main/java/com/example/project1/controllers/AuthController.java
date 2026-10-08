@@ -4,14 +4,20 @@ import com.example.project1.DTOs.TokenFactoryDTO;
 import com.example.project1.DTOs.UserLoginDTO;
 import com.example.project1.DTOs.UserRegisterDTO;
 import com.example.project1.repositories.UserRepository;
+import com.example.project1.security.JwtService;
 import com.example.project1.security.OAuthSuccessHandler;
+import com.example.project1.service.AuthenticationService;
 import com.example.project1.service.OAuthJWTTokenSevice;
 import com.example.project1.service.UserService;
 import jakarta.validation.Valid;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
+
+import java.security.Principal;
 
 @RestController
 @RequestMapping("/auth")
@@ -19,10 +25,12 @@ public class AuthController {
 
     private final UserService userService;
     private final OAuthJWTTokenSevice oAuthJWTTokenSevice;
+    private final AuthenticationService authenticationService;
 
-    public AuthController(UserService userService, OAuthJWTTokenSevice oAuthJWTTokenSevice) {
+    public AuthController(UserService userService, OAuthJWTTokenSevice oAuthJWTTokenSevice, AuthenticationService authenticationService) {
         this.userService = userService;
         this.oAuthJWTTokenSevice = oAuthJWTTokenSevice;
+        this.authenticationService = authenticationService;
     }
 
     @PostMapping("/refresh")
@@ -45,5 +53,22 @@ public class AuthController {
     {
         userService.registerUser(userRegisterDTO);
         return ResponseEntity.status(HttpStatus.CREATED).build();
+    }
+
+    @PostMapping("/logout")
+    public ResponseEntity<Void> logOut(
+            @RequestHeader(HttpHeaders.AUTHORIZATION) String authorization)
+    {
+        if (!authorization.startsWith("Bearer ")) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+        }
+
+        String token = authorization.substring(7).trim();
+        if (token.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+        }
+
+        authenticationService.blacklistJwtToken(token);
+        return ResponseEntity.noContent().build();
     }
 }

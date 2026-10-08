@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.Calendar;
 import java.util.Date;
+import java.util.UUID;
 
 @Component
 public class JwtService {
@@ -27,16 +28,18 @@ public class JwtService {
 
     public String generateToken(Authentication authentication) {
        return JWT.create()
-                .withSubject(authentication.getName())
-                .withIssuedAt(Calendar.getInstance().getTime())
-                .withExpiresAt(new Date(System.currentTimeMillis()+expireTime))
-                .sign(algorithm);
+               .withSubject(authentication.getName())
+               .withJWTId(UUID.randomUUID().toString())
+               .withIssuedAt(Calendar.getInstance().getTime())
+               .withExpiresAt(new Date(System.currentTimeMillis()+expireTime))
+               .sign(algorithm);
     }
 
     public String generateRefreshToken(Authentication authentication)
     {
         return JWT.create()
                 .withSubject(authentication.getName())
+                .withJWTId(UUID.randomUUID().toString())
                 .withIssuedAt(Calendar.getInstance().getTime())
                 .withExpiresAt(new Date(System.currentTimeMillis()+refreshTime))
                 .sign(algorithm);
@@ -45,6 +48,16 @@ public class JwtService {
     public String getName(String token)
     {
         return JWT.require(algorithm).build().verify(token).getSubject();
+    }
+
+    public String getId(String token)
+    {
+        return JWT.require(algorithm).build().verify(token).getId();
+    }
+
+    public Date getExpireTime(String token)
+    {
+        return JWT.require(algorithm).build().verify(token).getExpiresAt();
     }
 
     public Boolean isValid (String token)
